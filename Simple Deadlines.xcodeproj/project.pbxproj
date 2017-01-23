@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		04BFEB9B1E27D0C80020F4B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFEB9A1E27D0C80020F4B6 /* AppDelegate.swift */; };
-		04BFEB9D1E27D0C80020F4B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFEB9C1E27D0C80020F4B6 /* ViewController.swift */; };
 		04BFEBA01E27D0C80020F4B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BFEB9E1E27D0C80020F4B6 /* Main.storyboard */; };
 		04BFEBA21E27D0C80020F4B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BFEBA11E27D0C80020F4B6 /* Assets.xcassets */; };
 		04BFEBA51E27D0C80020F4B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BFEBA31E27D0C80020F4B6 /* LaunchScreen.storyboard */; };
 		04BFEBE31E27D6AD0020F4B6 /* LibSimpleDeadlines.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BFEBE21E27D6AD0020F4B6 /* LibSimpleDeadlines.framework */; };
 		04BFEBE41E27D6AD0020F4B6 /* LibSimpleDeadlines.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04BFEBE21E27D6AD0020F4B6 /* LibSimpleDeadlines.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		04BFEC021E27E26A0020F4B6 /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFEC011E27E26A0020F4B6 /* TasksTableViewController.swift */; };
+		04BFEC051E27E4E40020F4B6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BFEC041E27E4E40020F4B6 /* CoreData.framework */; };
+		04BFEC071E27ED870020F4B6 /* TaskDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFEC061E27ED870020F4B6 /* TaskDetailsViewController.swift */; };
+		04CC73451E36643100813281 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC73441E36643100813281 /* TaskTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,12 +36,15 @@
 /* Begin PBXFileReference section */
 		04BFEB971E27D0C80020F4B6 /* Simple Deadlines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Deadlines.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BFEB9A1E27D0C80020F4B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04BFEB9C1E27D0C80020F4B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04BFEB9F1E27D0C80020F4B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04BFEBA11E27D0C80020F4B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04BFEBA41E27D0C80020F4B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04BFEBA61E27D0C80020F4B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04BFEBE21E27D6AD0020F4B6 /* LibSimpleDeadlines.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LibSimpleDeadlines.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04BFEC011E27E26A0020F4B6 /* TasksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
+		04BFEC041E27E4E40020F4B6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		04BFEC061E27ED870020F4B6 /* TaskDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailsViewController.swift; sourceTree = "<group>"; };
+		04CC73441E36643100813281 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04BFEC051E27E4E40020F4B6 /* CoreData.framework in Frameworks */,
 				04BFEBE31E27D6AD0020F4B6 /* LibSimpleDeadlines.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +66,7 @@
 				04BFEBE21E27D6AD0020F4B6 /* LibSimpleDeadlines.framework */,
 				04BFEB991E27D0C80020F4B6 /* Simple Deadlines */,
 				04BFEB981E27D0C80020F4B6 /* Products */,
+				04BFEC031E27E4E40020F4B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,13 +82,23 @@
 			isa = PBXGroup;
 			children = (
 				04BFEB9A1E27D0C80020F4B6 /* AppDelegate.swift */,
-				04BFEB9C1E27D0C80020F4B6 /* ViewController.swift */,
 				04BFEB9E1E27D0C80020F4B6 /* Main.storyboard */,
 				04BFEBA11E27D0C80020F4B6 /* Assets.xcassets */,
 				04BFEBA31E27D0C80020F4B6 /* LaunchScreen.storyboard */,
 				04BFEBA61E27D0C80020F4B6 /* Info.plist */,
+				04BFEC011E27E26A0020F4B6 /* TasksTableViewController.swift */,
+				04BFEC061E27ED870020F4B6 /* TaskDetailsViewController.swift */,
+				04CC73441E36643100813281 /* TaskTableViewCell.swift */,
 			);
 			path = "Simple Deadlines";
+			sourceTree = "<group>";
+		};
+		04BFEC031E27E4E40020F4B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04BFEC041E27E4E40020F4B6 /* CoreData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,7 +175,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04BFEB9D1E27D0C80020F4B6 /* ViewController.swift in Sources */,
+				04CC73451E36643100813281 /* TaskTableViewCell.swift in Sources */,
+				04BFEC021E27E26A0020F4B6 /* TasksTableViewController.swift in Sources */,
+				04BFEC071E27ED870020F4B6 /* TaskDetailsViewController.swift in Sources */,
 				04BFEB9B1E27D0C80020F4B6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
