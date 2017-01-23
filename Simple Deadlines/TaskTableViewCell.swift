@@ -15,6 +15,7 @@ class TaskTableViewCell: UITableViewCell {
     @IBOutlet weak var counterView: UIView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var remainingDaysLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,16 +33,15 @@ class TaskTableViewCell: UITableViewCell {
             nameLabel.text = task.title
         }
         
+        categoryLabel.text = task.category?.name
+        
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         let dateString = formatter.string(from: task.date! as Date)
-        
         dateLabel.text = dateString
         
         let remainData = task.getRemainingDaysAndColor()
-        
         drawCircle(color: remainData.1)
-        
         remainingDaysLabel.text = String(remainData.0)
     }
     
