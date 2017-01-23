@@ -111,6 +111,45 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         }
     }
     
+    func filterByCategory(categoryName: String? = nil) {
+        if let categoryName = categoryName {
+            self.fetchedResultsController.fetchRequest.predicate = NSPredicate(format: "category.name == %@", categoryName)
+        } else {
+            self.fetchedResultsController.fetchRequest.predicate = nil
+        }
+        do {
+            try self.fetchedResultsController.performFetch()
+            self.tableView.reloadData()
+        } catch {
+            //TODO
+            print("ERROR")
+        }
+    }
+    
+    // MARK: - Action Sheet
+    
+    @IBAction func onCategoryButtonTouched(_ sender: UIButton) {
+        let alertController = UIAlertController(title: nil, message: "Choose a category to display", preferredStyle: .actionSheet)
+        
+        let action = UIAlertAction(title: "All", style: .default, handler: { (alertAction) in
+            sender.setTitle("All", for: .normal)
+            self.filterByCategory()
+        })
+        alertController.addAction(action)
+        
+        if let categoryArray = TasksService.sharedInstance.getAllCategory() {
+            for category in categoryArray {
+                let action = UIAlertAction(title: category.name , style: .default, handler: { (alertAction) in
+                    sender.setTitle(category.name, for: .normal)
+                    self.filterByCategory(categoryName: category.name)
+                })
+                alertController.addAction(action)
+            }
+        }
+        
+        self.present(alertController, animated: true)
+    }
+    
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

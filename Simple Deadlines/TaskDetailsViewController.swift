@@ -33,15 +33,19 @@ class TaskDetailsViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        if task != nil, !titleTextField.text!.isEmpty {
-            task!.date = datePicker.date as NSDate
-            TasksService.sharedInstance.save()
-        } else if let title = titleTextField.text, !title.isEmpty {
-            let newTask = TasksService.sharedInstance.getNewTask()
-            newTask.title = titleTextField.text
-            newTask.date = datePicker.date as NSDate
-            TasksService.sharedInstance.save()
+        
+        guard !titleTextField.text!.isEmpty else {return}
+        
+        if task == nil {
+            task = TasksService.sharedInstance.getNewTask()
         }
+        task!.title = titleTextField.text
+        task!.date = datePicker.date as NSDate
+        if let catTitle = categoryTextField.text, !catTitle.isEmpty {
+            let category = TasksService.sharedInstance.getCategory(name: catTitle)
+            task?.category = category
+        }
+        TasksService.sharedInstance.save()
     }
     
     @IBAction func titleChanged(_ sender: Any) {
