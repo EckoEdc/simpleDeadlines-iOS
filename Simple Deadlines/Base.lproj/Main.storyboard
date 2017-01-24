@@ -33,10 +33,15 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O0K-ia-RB9" customClass="CircleCounterView" customModule="Simple_Deadlines" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O0K-ia-RB9" customClass="CircleCounterView" customModule="LibSimpleDeadlines">
                                             <rect key="frame" x="8" y="8" width="43" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="dayRemaining">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iz0-eX-xUP">
                                             <rect key="frame" x="59" y="30" width="195" height="21"/>
@@ -109,13 +114,18 @@
                                     <stackView opaque="NO" contentMode="scaleAspectFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Za1-op-Gat">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="65"/>
                                         <subviews>
-                                            <view contentMode="left" translatesAutoresizingMaskIntoConstraints="NO" id="9li-mj-wJh" customClass="CircleCounterView" customModule="Simple_Deadlines" customModuleProvider="target">
+                                            <view contentMode="left" translatesAutoresizingMaskIntoConstraints="NO" id="9li-mj-wJh" customClass="CircleCounterView" customModule="LibSimpleDeadlines">
                                                 <rect key="frame" x="0.0" y="7.5" width="50" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="7Qz-Yt-mHX"/>
                                                     <constraint firstAttribute="height" constant="50" id="Ti6-II-iF0"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="dayRemaining">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="xD0-AD-gNR">
                                                 <rect key="frame" x="55" y="0.5" width="288" height="64"/>
