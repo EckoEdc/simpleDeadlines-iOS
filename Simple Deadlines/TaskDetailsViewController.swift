@@ -14,6 +14,7 @@ class TaskDetailsViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var categoryTextField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var counterView: CircleCounterView!
     
     var task: Task?
     
@@ -24,6 +25,9 @@ class TaskDetailsViewController: UIViewController {
             titleTextField.text = t.title
             categoryTextField.text = t.category?.name
             datePicker.setDate(Date(timeIntervalSince1970: t.date!.timeIntervalSince1970), animated: false)
+            setupCircleCounter()
+        } else {
+            task = TasksService.sharedInstance.getNewTask()
         }
     }
 
@@ -34,11 +38,11 @@ class TaskDetailsViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        guard !titleTextField.text!.isEmpty else {return}
-        
-        if task == nil {
-            task = TasksService.sharedInstance.getNewTask()
+        guard !titleTextField.text!.isEmpty else {
+            TasksService.sharedInstance.deleteTask(task: task!)
+            return
         }
+        
         task!.title = titleTextField.text
         task!.date = datePicker.date as NSDate
         if let catTitle = categoryTextField.text, !catTitle.isEmpty {
@@ -48,10 +52,14 @@ class TaskDetailsViewController: UIViewController {
         TasksService.sharedInstance.save()
     }
     
-    @IBAction func titleChanged(_ sender: Any) {
-        if let t = task {
-            t.title = titleTextField.text
-            t.date = datePicker.date as NSDate
-        }
+    @IBAction func onDateChanged(_ sender: Any) {
+        task?.date = datePicker.date as NSDate
+        setupCircleCounter()
+    }
+    
+    func setupCircleCounter() {
+        let remainData = task!.getRemainingDaysAndColor()
+        counterView.dayRemaining = remainData.0
+        counterView.color = remainData.1
     }
 }
