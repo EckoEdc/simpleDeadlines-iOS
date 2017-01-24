@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="47v-zj-Pgx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="47v-zj-Pgx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SRg-F8-tbH" id="MGQ-yH-Bd5">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUT-3o-SDb">
@@ -32,18 +33,9 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O0K-ia-RB9">
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O0K-ia-RB9" customClass="CircleCounterView" customModule="Simple_Deadlines" customModuleProvider="target">
                                             <rect key="frame" x="8" y="8" width="43" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppk-aj-GCs">
-                                                    <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iz0-eX-xUP">
@@ -67,7 +59,6 @@
                                     <outlet property="counterView" destination="O0K-ia-RB9" id="CuF-77-rHh"/>
                                     <outlet property="dateLabel" destination="OSi-eh-zY0" id="bde-sF-7bK"/>
                                     <outlet property="nameLabel" destination="LUT-3o-SDb" id="Nxs-ZZ-hJi"/>
-                                    <outlet property="remainingDaysLabel" destination="ppk-aj-GCs" id="ljk-h3-KiD"/>
                                     <segue destination="ien-A2-YrX" kind="show" identifier="showTask" id="5Ju-MS-OhR"/>
                                 </connections>
                             </tableViewCell>
@@ -112,35 +103,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YrW-L1-waA">
-                                <rect key="frame" x="16" y="117" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="titleChanged:" destination="ien-A2-YrX" eventType="editingChanged" id="duk-ar-GPe"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qXz-j4-ehe">
-                                <rect key="frame" x="16" y="155" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="7p4-ay-Z5L">
-                                <rect key="frame" x="0.0" y="225" width="375" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <date key="date" timeIntervalSinceReferenceDate="505932924.31398702">
-                                    <!--2017-01-12 16:55:24 +0000-->
-                                </date>
-                            </datePicker>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZGe-fH-Bn8">
+                                <rect key="frame" x="16" y="188" width="343" height="291"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Za1-op-Gat">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="65"/>
+                                        <subviews>
+                                            <view contentMode="left" translatesAutoresizingMaskIntoConstraints="NO" id="9li-mj-wJh" customClass="CircleCounterView" customModule="Simple_Deadlines" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="7.5" width="50" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="7Qz-Yt-mHX"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Ti6-II-iF0"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="xD0-AD-gNR">
+                                                <rect key="frame" x="55" y="0.5" width="288" height="64"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YrW-L1-waA">
+                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qXz-j4-ehe">
+                                                        <rect key="frame" x="0.0" y="34" width="288" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="9li-mj-wJh" firstAttribute="leading" secondItem="Za1-op-Gat" secondAttribute="leading" id="fiI-no-qNk"/>
+                                            <constraint firstAttribute="height" constant="65" id="gNi-eE-a3q"/>
+                                        </constraints>
+                                    </stackView>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="7p4-ay-Z5L">
+                                        <rect key="frame" x="0.0" y="75" width="343" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="505932924.31398702">
+                                            <!--2017-01-12 16:55:24 +0000-->
+                                        </date>
+                                        <connections>
+                                            <action selector="onDateChanged:" destination="ien-A2-YrX" eventType="valueChanged" id="iE9-Dc-4wi"/>
+                                        </connections>
+                                    </datePicker>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZGe-fH-Bn8" secondAttribute="trailing" id="ISG-D2-ep8"/>
+                            <constraint firstItem="ZGe-fH-Bn8" firstAttribute="centerY" secondItem="J7a-gi-lys" secondAttribute="centerY" id="aYg-84-Zhy"/>
+                            <constraint firstItem="ZGe-fH-Bn8" firstAttribute="centerX" secondItem="J7a-gi-lys" secondAttribute="centerX" id="h8d-zr-vhN"/>
+                            <constraint firstItem="ZGe-fH-Bn8" firstAttribute="leading" secondItem="J7a-gi-lys" secondAttribute="leadingMargin" id="vxC-Rw-9YD"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="categoryTextField" destination="qXz-j4-ehe" id="uFC-FB-bv3"/>
+                        <outlet property="counterView" destination="9li-mj-wJh" id="DFm-jF-Vpz"/>
                         <outlet property="datePicker" destination="7p4-ay-Z5L" id="4xR-Gl-Zyg"/>
                         <outlet property="titleTextField" destination="YrW-L1-waA" id="7p7-dr-afD"/>
                     </connections>

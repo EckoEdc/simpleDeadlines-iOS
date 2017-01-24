@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040F10271E3798460016C666 /* CircleCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F10261E3798460016C666 /* CircleCounterView.swift */; };
 		04BFEB9B1E27D0C80020F4B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFEB9A1E27D0C80020F4B6 /* AppDelegate.swift */; };
 		04BFEBA01E27D0C80020F4B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BFEB9E1E27D0C80020F4B6 /* Main.storyboard */; };
 		04BFEBA21E27D0C80020F4B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BFEBA11E27D0C80020F4B6 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		040F10261E3798460016C666 /* CircleCounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleCounterView.swift; sourceTree = "<group>"; };
 		04BFEB971E27D0C80020F4B6 /* Simple Deadlines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Deadlines.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BFEB9A1E27D0C80020F4B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04BFEB9F1E27D0C80020F4B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				04BFEC011E27E26A0020F4B6 /* TasksTableViewController.swift */,
 				04BFEC061E27ED870020F4B6 /* TaskDetailsViewController.swift */,
 				04CC73441E36643100813281 /* TaskTableViewCell.swift */,
+				040F10261E3798460016C666 /* CircleCounterView.swift */,
 			);
 			path = "Simple Deadlines";
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040F10271E3798460016C666 /* CircleCounterView.swift in Sources */,
 				04CC73451E36643100813281 /* TaskTableViewCell.swift in Sources */,
 				04BFEC021E27E26A0020F4B6 /* TasksTableViewController.swift in Sources */,
 				04BFEC071E27ED870020F4B6 /* TaskDetailsViewController.swift in Sources */,
