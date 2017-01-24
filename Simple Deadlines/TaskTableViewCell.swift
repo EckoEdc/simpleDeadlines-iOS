@@ -34,8 +34,10 @@ class TaskTableViewCell: UITableViewCell {
         
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
-        let dateString = formatter.string(from: task.date! as Date)
-        dateLabel.text = dateString
+        if let date = task.date {
+            let dateString = formatter.string(from: date as Date)
+            dateLabel.text = dateString
+        }
         
         let remainData = task.getRemainingDaysAndColor()
         counterView.dayRemaining = remainData.0
