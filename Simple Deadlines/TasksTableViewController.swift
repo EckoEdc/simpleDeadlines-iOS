@@ -112,18 +112,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     }
     
     func filterByCategory(categoryName: String? = nil) {
-        if let categoryName = categoryName {
-            self.fetchedResultsController.fetchRequest.predicate = NSPredicate(format: "category.name == %@", categoryName)
-        } else {
-            self.fetchedResultsController.fetchRequest.predicate = nil
-        }
-        do {
-            try self.fetchedResultsController.performFetch()
-            self.tableView.reloadData()
-        } catch {
-            //TODO
-            print("ERROR")
-        }
+        TasksService.sharedInstance.filterFetchedResultsByCategory(fetchedResultsController: fetchedResultsController, categoryName: categoryName)
+        tableView.reloadData()
     }
     
     // MARK: - Action Sheet
