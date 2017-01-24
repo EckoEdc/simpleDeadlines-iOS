@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		040F10271E3798460016C666 /* CircleCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F10261E3798460016C666 /* CircleCounterView.swift */; };
+		040F102E1E37A83C0016C666 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040F102D1E37A83C0016C666 /* NotificationCenter.framework */; };
+		040F10311E37A83C0016C666 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F10301E37A83C0016C666 /* TodayViewController.swift */; };
+		040F10341E37A83C0016C666 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040F10321E37A83C0016C666 /* MainInterface.storyboard */; };
+		040F10381E37A83C0016C666 /* Simple Deadlines iOS Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 040F102C1E37A83C0016C666 /* Simple Deadlines iOS Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		040F10471E37C30A0016C666 /* LibSimpleDeadlines.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040F10411E37B2890016C666 /* LibSimpleDeadlines.framework */; };
+		040F105E1E37CDB70016C666 /* AERecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040F10551E37CA360016C666 /* AERecord.framework */; };
+		040F105F1E37CDBB0016C666 /* DateHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040F10571E37CA390016C666 /* DateHelper.framework */; };
 		04BFEB9B1E27D0C80020F4B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFEB9A1E27D0C80020F4B6 /* AppDelegate.swift */; };
 		04BFEBA01E27D0C80020F4B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BFEB9E1E27D0C80020F4B6 /* Main.storyboard */; };
 		04BFEBA21E27D0C80020F4B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BFEBA11E27D0C80020F4B6 /* Assets.xcassets */; };
@@ -20,7 +26,28 @@
 		04CC73451E36643100813281 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC73441E36643100813281 /* TaskTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		040F10361E37A83C0016C666 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04BFEB8F1E27D0C80020F4B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 040F102B1E37A83C0016C666;
+			remoteInfo = "Simple Deadlines iOS Widget";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
+		040F103C1E37A83C0016C666 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				040F10381E37A83C0016C666 /* Simple Deadlines iOS Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04BFEBC61E27D1720020F4B6 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -35,7 +62,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		040F10261E3798460016C666 /* CircleCounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleCounterView.swift; sourceTree = "<group>"; };
+		040F102C1E37A83C0016C666 /* Simple Deadlines iOS Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Simple Deadlines iOS Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		040F102D1E37A83C0016C666 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		040F10301E37A83C0016C666 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		040F10331E37A83C0016C666 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		040F10351E37A83C0016C666 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		040F10411E37B2890016C666 /* LibSimpleDeadlines.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LibSimpleDeadlines.framework; path = "../../../Library/Developer/Xcode/DerivedData/SimpleDeadLinesProject-aaygbaldxqefffhhmtcwxuvmqpvp/Build/Products/Debug-iphonesimulator/LibSimpleDeadlines.framework"; sourceTree = "<group>"; };
+		040F10451E37BFC40016C666 /* Simple Deadlines.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Simple Deadlines.entitlements"; sourceTree = "<group>"; };
+		040F10461E37BFCF0016C666 /* Simple Deadlines iOS Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "Simple Deadlines iOS Widget.entitlements"; path = "Simple Deadlines iOS Widget/Simple Deadlines iOS Widget.entitlements"; sourceTree = "<group>"; };
+		040F10491E37C70E0016C666 /* AERecord.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AERecord.framework; path = ../LibSimpleDeadlines/Carthage/Build/iOS/AERecord.framework; sourceTree = "<group>"; };
+		040F104B1E37C71B0016C666 /* DateHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DateHelper.framework; path = ../LibSimpleDeadlines/Carthage/Build/iOS/DateHelper.framework; sourceTree = "<group>"; };
+		040F10551E37CA360016C666 /* AERecord.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AERecord.framework; path = Carthage/Build/iOS/AERecord.framework; sourceTree = "<group>"; };
+		040F10571E37CA390016C666 /* DateHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DateHelper.framework; path = Carthage/Build/iOS/DateHelper.framework; sourceTree = "<group>"; };
 		04BFEB971E27D0C80020F4B6 /* Simple Deadlines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Deadlines.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BFEB9A1E27D0C80020F4B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04BFEB9F1E27D0C80020F4B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,23 +88,47 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		040F10291E37A83C0016C666 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				040F10471E37C30A0016C666 /* LibSimpleDeadlines.framework in Frameworks */,
+				040F102E1E37A83C0016C666 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04BFEB941E27D0C80020F4B6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				04BFEC051E27E4E40020F4B6 /* CoreData.framework in Frameworks */,
 				04BFEBE31E27D6AD0020F4B6 /* LibSimpleDeadlines.framework in Frameworks */,
+				040F105F1E37CDBB0016C666 /* DateHelper.framework in Frameworks */,
+				040F105E1E37CDB70016C666 /* AERecord.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040F102F1E37A83C0016C666 /* Simple Deadlines iOS Widget Summary */ = {
+			isa = PBXGroup;
+			children = (
+				040F10301E37A83C0016C666 /* TodayViewController.swift */,
+				040F10321E37A83C0016C666 /* MainInterface.storyboard */,
+				040F10351E37A83C0016C666 /* Info.plist */,
+			);
+			name = "Simple Deadlines iOS Widget Summary";
+			path = "Simple Deadlines iOS Widget";
+			sourceTree = "<group>";
+		};
 		04BFEB8E1E27D0C80020F4B6 = {
 			isa = PBXGroup;
 			children = (
+				040F10461E37BFCF0016C666 /* Simple Deadlines iOS Widget.entitlements */,
 				04BFEBE21E27D6AD0020F4B6 /* LibSimpleDeadlines.framework */,
 				04BFEB991E27D0C80020F4B6 /* Simple Deadlines */,
+				040F102F1E37A83C0016C666 /* Simple Deadlines iOS Widget Summary */,
 				04BFEB981E27D0C80020F4B6 /* Products */,
 				04BFEC031E27E4E40020F4B6 /* Frameworks */,
 			);
@@ -76,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				04BFEB971E27D0C80020F4B6 /* Simple Deadlines.app */,
+				040F102C1E37A83C0016C666 /* Simple Deadlines iOS Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,6 +146,7 @@
 		04BFEB991E27D0C80020F4B6 /* Simple Deadlines */ = {
 			isa = PBXGroup;
 			children = (
+				040F10451E37BFC40016C666 /* Simple Deadlines.entitlements */,
 				04BFEB9A1E27D0C80020F4B6 /* AppDelegate.swift */,
 				04BFEB9E1E27D0C80020F4B6 /* Main.storyboard */,
 				04BFEBA11E27D0C80020F4B6 /* Assets.xcassets */,
@@ -91,7 +155,6 @@
 				04BFEC011E27E26A0020F4B6 /* TasksTableViewController.swift */,
 				04BFEC061E27ED870020F4B6 /* TaskDetailsViewController.swift */,
 				04CC73441E36643100813281 /* TaskTableViewCell.swift */,
-				040F10261E3798460016C666 /* CircleCounterView.swift */,
 			);
 			path = "Simple Deadlines";
 			sourceTree = "<group>";
@@ -99,7 +162,13 @@
 		04BFEC031E27E4E40020F4B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				040F10571E37CA390016C666 /* DateHelper.framework */,
+				040F10551E37CA360016C666 /* AERecord.framework */,
+				040F104B1E37C71B0016C666 /* DateHelper.framework */,
+				040F10491E37C70E0016C666 /* AERecord.framework */,
+				040F10411E37B2890016C666 /* LibSimpleDeadlines.framework */,
 				04BFEC041E27E4E40020F4B6 /* CoreData.framework */,
+				040F102D1E37A83C0016C666 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,6 +176,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		040F102B1E37A83C0016C666 /* Simple Deadlines iOS Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 040F10391E37A83C0016C666 /* Build configuration list for PBXNativeTarget "Simple Deadlines iOS Widget" */;
+			buildPhases = (
+				040F10281E37A83C0016C666 /* Sources */,
+				040F10291E37A83C0016C666 /* Frameworks */,
+				040F102A1E37A83C0016C666 /* Resources */,
+				040F10591E37CA400016C666 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Simple Deadlines iOS Widget";
+			productName = "Simple Deadlines iOS Widget";
+			productReference = 040F102C1E37A83C0016C666 /* Simple Deadlines iOS Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		04BFEB961E27D0C80020F4B6 /* Simple Deadlines */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04BFEBA91E27D0C80020F4B6 /* Build configuration list for PBXNativeTarget "Simple Deadlines" */;
@@ -115,10 +202,13 @@
 				04BFEB941E27D0C80020F4B6 /* Frameworks */,
 				04BFEB951E27D0C80020F4B6 /* Resources */,
 				04BFEBC61E27D1720020F4B6 /* Embed Frameworks */,
+				040F103C1E37A83C0016C666 /* Embed App Extensions */,
+				040F10601E37CDC70016C666 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				040F10371E37A83C0016C666 /* PBXTargetDependency */,
 			);
 			name = "Simple Deadlines";
 			productName = "Simple Deadlines";
@@ -135,10 +225,25 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Edric MILARET";
 				TargetAttributes = {
+					040F102B1E37A83C0016C666 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Y7US3C769A;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					04BFEB961E27D0C80020F4B6 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = Y7US3C769A;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -156,11 +261,20 @@
 			projectRoot = "";
 			targets = (
 				04BFEB961E27D0C80020F4B6 /* Simple Deadlines */,
+				040F102B1E37A83C0016C666 /* Simple Deadlines iOS Widget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		040F102A1E37A83C0016C666 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				040F10341E37A83C0016C666 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04BFEB951E27D0C80020F4B6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -173,12 +287,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		040F10591E37CA400016C666 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/AERecord.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/DateHelper.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		040F10601E37CDC70016C666 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/AERecord.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/DateHelper.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		040F10281E37A83C0016C666 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				040F10311E37A83C0016C666 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04BFEB931E27D0C80020F4B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				040F10271E3798460016C666 /* CircleCounterView.swift in Sources */,
 				04CC73451E36643100813281 /* TaskTableViewCell.swift in Sources */,
 				04BFEC021E27E26A0020F4B6 /* TasksTableViewController.swift in Sources */,
 				04BFEC071E27ED870020F4B6 /* TaskDetailsViewController.swift in Sources */,
@@ -188,7 +342,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		040F10371E37A83C0016C666 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 040F102B1E37A83C0016C666 /* Simple Deadlines iOS Widget */;
+			targetProxy = 040F10361E37A83C0016C666 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		040F10321E37A83C0016C666 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				040F10331E37A83C0016C666 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		04BFEB9E1E27D0C80020F4B6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -208,6 +378,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		040F103A1E37A83C0016C666 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Simple Deadlines iOS Widget/Simple Deadlines iOS Widget.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Y7US3C769A;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
+				INFOPLIST_FILE = "Simple Deadlines iOS Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.auroralab.Simple-Deadlines.Simple-Deadlines-iOS-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		040F103B1E37A83C0016C666 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Simple Deadlines iOS Widget/Simple Deadlines iOS Widget.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Y7US3C769A;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
+				INFOPLIST_FILE = "Simple Deadlines iOS Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.auroralab.Simple-Deadlines.Simple-Deadlines-iOS-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		04BFEBA71E27D0C80020F4B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -304,8 +506,14 @@
 		04BFEBAA1E27D0C80020F4B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Simple Deadlines/Simple Deadlines.entitlements";
 				DEVELOPMENT_TEAM = Y7US3C769A;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Simple Deadlines/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.auroralab.Simple-Deadlines";
@@ -317,8 +525,14 @@
 		04BFEBAB1E27D0C80020F4B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Simple Deadlines/Simple Deadlines.entitlements";
 				DEVELOPMENT_TEAM = Y7US3C769A;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Simple Deadlines/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.auroralab.Simple-Deadlines";
@@ -330,6 +544,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		040F10391E37A83C0016C666 /* Build configuration list for PBXNativeTarget "Simple Deadlines iOS Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				040F103A1E37A83C0016C666 /* Debug */,
+				040F103B1E37A83C0016C666 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		04BFEB921E27D0C80020F4B6 /* Build configuration list for PBXProject "Simple Deadlines" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

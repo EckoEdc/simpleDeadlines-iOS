@@ -8,38 +8,40 @@
 
 import UIKit
 
-class CircleCounterView: UIView {
+@IBDesignable
+public class CircleCounterView: UIView {
     
     let circleLayer = CAShapeLayer()
     
     let dayLabel = UILabel()
     
-    private var _dayRemaining: Int = 0
-    private var _color: UIColor = UIColor.red
-    
-    var dayRemaining: Int {
-        get {
-            return _dayRemaining
-        }
-        set {
-            _dayRemaining = newValue
+    @IBInspectable public var dayRemaining: Int = 0 {
+        didSet {
             dayLabel.text = String(dayRemaining)
         }
     }
     
-    var color: UIColor {
-        get {
-            return _color
-        }
-        set {
-            _color = newValue
-            circleLayer.fillColor = _color.cgColor
+    @IBInspectable public var color: UIColor = .red {
+        didSet {
+            circleLayer.fillColor = color.cgColor
         }
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
+        self.isOpaque = false
+        self.backgroundColor = .clear
+    }
+    
+    public override func draw(_ frame: CGRect) {
+        drawCircle()
+    }
+    
+    func drawCircle() {
         let width = Double(self.bounds.size.width);
         let height = Double(self.bounds.size.height);
         
