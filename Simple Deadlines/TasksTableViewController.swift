@@ -139,14 +139,15 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         if let categoryArray = TasksService.sharedInstance.getAllCategory() {
             for category in categoryArray {
-                let action = UIAlertAction(title: category.name , style: .default, handler: { (alertAction) in
-                    sender.setTitle(category.name, for: .normal)
-                    self.filterByCategory(categoryName: category.name)
-                })
-                alertController.addAction(action)
+                if category.tasks != nil, category.tasks!.count > 0 {
+                    let action = UIAlertAction(title: category.name , style: .default, handler: { (alertAction) in
+                        sender.setTitle(category.name, for: .normal)
+                        self.filterByCategory(categoryName: category.name)
+                    })
+                    alertController.addAction(action)
+                }
             }
         }
-        
         self.present(alertController, animated: true)
     }
     
