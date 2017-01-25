@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mini Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="MiniTodayViewController" customModule="Simple_Deadlines_Urgent_Widget" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n5a-9N-hCc">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="taskCell" id="oc0-PH-Itx" customClass="MiniTaskTableViewCell" customModule="Simple_Deadlines_Urgent_Widget" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oc0-PH-Itx" id="97o-Lg-gsC">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleAspectFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4yr-fI-Afo">
+                                                    <rect key="frame" x="5" y="0.0" width="310" height="39.5"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zK3-Qv-bf8" customClass="CircleCounterView" customModule="LibSimpleDeadlines">
+                                                            <rect key="frame" x="0.0" y="2.5" width="35" height="35"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="35" id="Ega-dY-3mE"/>
+                                                                <constraint firstAttribute="height" constant="35" id="dyA-C0-YRs"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCd-Rv-wSh">
+                                                            <rect key="frame" x="40" y="12" width="270" height="16"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="4yr-fI-Afo" secondAttribute="bottom" id="KdP-jA-ZKL"/>
+                                                <constraint firstItem="4yr-fI-Afo" firstAttribute="leading" secondItem="97o-Lg-gsC" secondAttribute="leading" constant="5" id="LzL-fl-Rwv"/>
+                                                <constraint firstAttribute="trailing" secondItem="4yr-fI-Afo" secondAttribute="trailing" constant="5" id="mME-UJ-FSt"/>
+                                                <constraint firstItem="4yr-fI-Afo" firstAttribute="top" secondItem="97o-Lg-gsC" secondAttribute="top" id="xgG-is-Yqc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="counterView" destination="zK3-Qv-bf8" id="lSw-Bs-X8A"/>
+                                            <outlet property="titleLabel" destination="dCd-Rv-wSh" id="tvu-11-hgh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="M4Y-Lb-cyx" id="cxu-ar-o9h"/>
+                                    <outlet property="delegate" destination="M4Y-Lb-cyx" id="EeP-Gz-JAy"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="n5a-9N-hCc" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="Ja6-dq-PT4"/>
+                            <constraint firstAttribute="bottom" secondItem="n5a-9N-hCc" secondAttribute="bottom" id="aFw-47-Xry"/>
+                            <constraint firstAttribute="trailing" secondItem="n5a-9N-hCc" secondAttribute="trailing" id="lBx-sd-5pM"/>
+                            <constraint firstItem="n5a-9N-hCc" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="uuo-mL-TGr"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="110"/>
+                    <connections>
+                        <outlet property="tableView" destination="n5a-9N-hCc" id="DIE-N2-mDa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="25.600000000000001" y="35.982008995502248"/>
+        </scene>
+    </scenes>
+</document>
