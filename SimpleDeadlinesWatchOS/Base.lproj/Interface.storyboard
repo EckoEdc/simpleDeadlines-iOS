@@ -9,10 +9,37 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
     </dependencies>
     <scenes>
-        <!--Deadlines-->
+        <!--Category-->
+        <scene sceneID="qQa-AG-Xku">
+            <objects>
+                <controller identifier="CategoryInterfaceController" title="Category" id="uUc-UC-b1o" customClass="CategoryInterfaceController" customModule="SimpleDeadlinesWatchOS_Extension">
+                    <items>
+                        <table alignment="left" id="cxs-H3-ATu">
+                            <items>
+                                <tableRow identifier="categoryRow" id="X7x-Z5-3TV" customClass="CategoryRow" customModule="SimpleDeadlinesWatchOS_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="1rf-fK-B1W">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="Category name" id="iOe-Lu-OYP"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="nameLabel" destination="iOe-Lu-OYP" id="598-f4-Rut"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tableView" destination="cxs-H3-ATu" id="q0e-dW-Ag7"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="92" y="-160"/>
+        </scene>
+        <!--All-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller title="Deadlines" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SimpleDeadlinesWatchOS" customModuleProvider="target">
+                <controller title="All" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SimpleDeadlinesWatchOS" customModuleProvider="target">
                     <items>
                         <table alignment="left" id="3pI-8n-ji7">
                             <items>
@@ -33,6 +60,15 @@
                             </items>
                         </table>
                     </items>
+                    <menu key="menu" id="5wl-jx-BCx">
+                        <items>
+                            <menuItem title="Category" icon="more" id="aHm-rT-ooX">
+                                <connections>
+                                    <action selector="onCategoryTouched" destination="AgC-eL-Hgc" id="6fI-RD-Ml3"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="tableView" destination="3pI-8n-ji7" id="IU2-ke-rJB"/>
                     </connections>

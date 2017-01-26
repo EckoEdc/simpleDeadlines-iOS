@@ -39,8 +39,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
-        if (message["Tasks"] as? Bool) != nil {
-            let tasks = TasksService.sharedInstance.getTasks(undoneOnly: true)
+        if let category = message["Tasks"] as? String {
+            let tasks = TasksService.sharedInstance.getTasks(undoneOnly: true, category: category)
             var response: [[String: Any]] = []
             for task in tasks {
                 response.append(task.toSimpleMessage())
@@ -52,6 +52,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
                 TasksService.sharedInstance.markAsDone(objectID: objID)
             }
             replyHandler([:])
+        }
+        if message["Category"] as? Bool != nil {
+            if let category = TasksService.sharedInstance.getAllCategory() {
+                var response: [String] = []
+                for category in category {
+                    response.append(category.name!)
+                }
+                replyHandler(["Category": response])
+            } else {
+                replyHandler(["Category": []])
+            }
         }
     }
     
