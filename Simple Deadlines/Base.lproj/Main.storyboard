@@ -79,6 +79,7 @@
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ouB-DZ-oYh">
                             <rect key="frame" x="113" y="7" width="150" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
                             <state key="normal" title="All"/>
                             <connections>
                                 <action selector="onCategoryButtonTouched:" destination="uNJ-dp-iZf" eventType="touchUpInside" id="e0S-lh-yhU"/>
