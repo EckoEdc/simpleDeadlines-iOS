@@ -49,6 +49,7 @@ class TaskDetailsViewController: UIViewController {
             let category = TasksService.sharedInstance.getCategory(name: catTitle)
             task?.category = category
         }
+        (UIApplication.shared.delegate as! AppDelegate).sendReloadMsg()
         TasksService.sharedInstance.save()
     }
     

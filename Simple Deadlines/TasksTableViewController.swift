@@ -59,11 +59,13 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         let done = UITableViewRowAction(style: .normal, title: "Done") { action, index in
             TasksService.sharedInstance.markAsDone(task: task)
             tableView.setEditing(false, animated: true)
+            (UIApplication.shared.delegate as! AppDelegate).sendReloadMsg()
         }
         done.backgroundColor = UIColor.green
         let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
             TasksService.sharedInstance.deleteTask(task: task)
             tableView.setEditing(false, animated: true)
+            (UIApplication.shared.delegate as! AppDelegate).sendReloadMsg()
         }
         delete.backgroundColor = UIColor.red
         return [delete, done]
