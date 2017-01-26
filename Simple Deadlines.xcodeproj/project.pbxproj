@@ -20,6 +20,15 @@
 		043E5EC21E37D84A0075056A /* Simple Deadlines Urgent Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 043E5EB71E37D84A0075056A /* Simple Deadlines Urgent Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		043E5EC61E37D85D0075056A /* LibSimpleDeadlines.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040F10411E37B2890016C666 /* LibSimpleDeadlines.framework */; };
 		043E5EC91E37DF0B0075056A /* MiniTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E5EC81E37DF0B0075056A /* MiniTaskTableViewCell.swift */; };
+		043E5F1F1E3A30500075056A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043E5F1D1E3A30500075056A /* Interface.storyboard */; };
+		043E5F211E3A30500075056A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043E5F201E3A30500075056A /* Assets.xcassets */; };
+		043E5F281E3A30500075056A /* SimpleDeadlinesWatchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 043E5F271E3A30500075056A /* SimpleDeadlinesWatchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		043E5F2D1E3A30500075056A /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E5F2C1E3A30500075056A /* InterfaceController.swift */; };
+		043E5F2F1E3A30500075056A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E5F2E1E3A30500075056A /* ExtensionDelegate.swift */; };
+		043E5F311E3A30500075056A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043E5F301E3A30500075056A /* Assets.xcassets */; };
+		043E5F351E3A30500075056A /* SimpleDeadlinesWatchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 043E5F1B1E3A304F0075056A /* SimpleDeadlinesWatchOS.app */; };
+		043E5F3F1E3A3A1C0075056A /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E5F3E1E3A3A1C0075056A /* TaskRow.swift */; };
+		043E5F411E3A4A370075056A /* TaskDetailsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E5F401E3A4A370075056A /* TaskDetailsInterfaceController.swift */; };
 		04BFEB9B1E27D0C80020F4B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFEB9A1E27D0C80020F4B6 /* AppDelegate.swift */; };
 		04BFEBA01E27D0C80020F4B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BFEB9E1E27D0C80020F4B6 /* Main.storyboard */; };
 		04BFEBA21E27D0C80020F4B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BFEBA11E27D0C80020F4B6 /* Assets.xcassets */; };
@@ -47,6 +56,20 @@
 			remoteGlobalIDString = 043E5EB61E37D84A0075056A;
 			remoteInfo = "Simple Deadlines Urgent Widget";
 		};
+		043E5F291E3A30500075056A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04BFEB8F1E27D0C80020F4B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 043E5F261E3A30500075056A;
+			remoteInfo = "SimpleDeadlinesWatchOS Extension";
+		};
+		043E5F331E3A30500075056A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04BFEB8F1E27D0C80020F4B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 043E5F1A1E3A304F0075056A;
+			remoteInfo = SimpleDeadlinesWatchOS;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,6 +83,28 @@
 				040F10381E37A83C0016C666 /* Simple Deadlines iOS Widget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		043E5F3B1E3A30500075056A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				043E5F281E3A30500075056A /* SimpleDeadlinesWatchOS Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		043E5F3D1E3A30500075056A /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				043E5F351E3A30500075056A /* SimpleDeadlinesWatchOS.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		04BFEBC61E27D1720020F4B6 /* Embed Frameworks */ = {
@@ -94,6 +139,17 @@
 		043E5EBF1E37D84A0075056A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		043E5EC71E37DC800075056A /* Simple Deadlines Urgent Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Simple Deadlines Urgent Widget.entitlements"; sourceTree = "<group>"; };
 		043E5EC81E37DF0B0075056A /* MiniTaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniTaskTableViewCell.swift; sourceTree = "<group>"; };
+		043E5F1B1E3A304F0075056A /* SimpleDeadlinesWatchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleDeadlinesWatchOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		043E5F1E1E3A30500075056A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		043E5F201E3A30500075056A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		043E5F221E3A30500075056A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		043E5F271E3A30500075056A /* SimpleDeadlinesWatchOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SimpleDeadlinesWatchOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		043E5F2C1E3A30500075056A /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		043E5F2E1E3A30500075056A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		043E5F301E3A30500075056A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		043E5F321E3A30500075056A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		043E5F3E1E3A3A1C0075056A /* TaskRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
+		043E5F401E3A4A370075056A /* TaskDetailsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailsInterfaceController.swift; sourceTree = "<group>"; };
 		04BFEB971E27D0C80020F4B6 /* Simple Deadlines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Deadlines.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BFEB9A1E27D0C80020F4B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04BFEB9F1E27D0C80020F4B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -123,6 +179,13 @@
 			files = (
 				043E5EC61E37D85D0075056A /* LibSimpleDeadlines.framework in Frameworks */,
 				043E5EB81E37D84A0075056A /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		043E5F241E3A30500075056A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +226,29 @@
 			path = "Simple Deadlines Urgent Widget";
 			sourceTree = "<group>";
 		};
+		043E5F1C1E3A30500075056A /* SimpleDeadlinesWatchOS */ = {
+			isa = PBXGroup;
+			children = (
+				043E5F1D1E3A30500075056A /* Interface.storyboard */,
+				043E5F201E3A30500075056A /* Assets.xcassets */,
+				043E5F221E3A30500075056A /* Info.plist */,
+			);
+			path = SimpleDeadlinesWatchOS;
+			sourceTree = "<group>";
+		};
+		043E5F2B1E3A30500075056A /* SimpleDeadlinesWatchOS Extension */ = {
+			isa = PBXGroup;
+			children = (
+				043E5F2C1E3A30500075056A /* InterfaceController.swift */,
+				043E5F2E1E3A30500075056A /* ExtensionDelegate.swift */,
+				043E5F301E3A30500075056A /* Assets.xcassets */,
+				043E5F321E3A30500075056A /* Info.plist */,
+				043E5F3E1E3A3A1C0075056A /* TaskRow.swift */,
+				043E5F401E3A4A370075056A /* TaskDetailsInterfaceController.swift */,
+			);
+			path = "SimpleDeadlinesWatchOS Extension";
+			sourceTree = "<group>";
+		};
 		04BFEB8E1E27D0C80020F4B6 = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +257,8 @@
 				04BFEB991E27D0C80020F4B6 /* Simple Deadlines */,
 				040F102F1E37A83C0016C666 /* Simple Deadlines iOS Widget Summary */,
 				043E5EB91E37D84A0075056A /* Simple Deadlines Urgent Widget */,
+				043E5F1C1E3A30500075056A /* SimpleDeadlinesWatchOS */,
+				043E5F2B1E3A30500075056A /* SimpleDeadlinesWatchOS Extension */,
 				04BFEB981E27D0C80020F4B6 /* Products */,
 				04BFEC031E27E4E40020F4B6 /* Frameworks */,
 			);
@@ -182,6 +270,8 @@
 				04BFEB971E27D0C80020F4B6 /* Simple Deadlines.app */,
 				040F102C1E37A83C0016C666 /* Simple Deadlines iOS Widget.appex */,
 				043E5EB71E37D84A0075056A /* Simple Deadlines Urgent Widget.appex */,
+				043E5F1B1E3A304F0075056A /* SimpleDeadlinesWatchOS.app */,
+				043E5F271E3A30500075056A /* SimpleDeadlinesWatchOS Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -254,6 +344,40 @@
 			productReference = 043E5EB71E37D84A0075056A /* Simple Deadlines Urgent Widget.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		043E5F1A1E3A304F0075056A /* SimpleDeadlinesWatchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 043E5F3C1E3A30500075056A /* Build configuration list for PBXNativeTarget "SimpleDeadlinesWatchOS" */;
+			buildPhases = (
+				043E5F191E3A304F0075056A /* Resources */,
+				043E5F3B1E3A30500075056A /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				043E5F2A1E3A30500075056A /* PBXTargetDependency */,
+			);
+			name = SimpleDeadlinesWatchOS;
+			productName = SimpleDeadlinesWatchOS;
+			productReference = 043E5F1B1E3A304F0075056A /* SimpleDeadlinesWatchOS.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		043E5F261E3A30500075056A /* SimpleDeadlinesWatchOS Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 043E5F3A1E3A30500075056A /* Build configuration list for PBXNativeTarget "SimpleDeadlinesWatchOS Extension" */;
+			buildPhases = (
+				043E5F231E3A30500075056A /* Sources */,
+				043E5F241E3A30500075056A /* Frameworks */,
+				043E5F251E3A30500075056A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SimpleDeadlinesWatchOS Extension";
+			productName = "SimpleDeadlinesWatchOS Extension";
+			productReference = 043E5F271E3A30500075056A /* SimpleDeadlinesWatchOS Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		04BFEB961E27D0C80020F4B6 /* Simple Deadlines */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04BFEBA91E27D0C80020F4B6 /* Build configuration list for PBXNativeTarget "Simple Deadlines" */;
@@ -264,12 +388,14 @@
 				04BFEBC61E27D1720020F4B6 /* Embed Frameworks */,
 				040F103C1E37A83C0016C666 /* Embed App Extensions */,
 				040F10601E37CDC70016C666 /* ShellScript */,
+				043E5F3D1E3A30500075056A /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				040F10371E37A83C0016C666 /* PBXTargetDependency */,
 				043E5EC11E37D84A0075056A /* PBXTargetDependency */,
+				043E5F341E3A30500075056A /* PBXTargetDependency */,
 			);
 			name = "Simple Deadlines";
 			productName = "Simple Deadlines";
@@ -306,6 +432,16 @@
 							};
 						};
 					};
+					043E5F1A1E3A304F0075056A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Y7US3C769A;
+						ProvisioningStyle = Automatic;
+					};
+					043E5F261E3A30500075056A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Y7US3C769A;
+						ProvisioningStyle = Automatic;
+					};
 					04BFEB961E27D0C80020F4B6 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = Y7US3C769A;
@@ -334,6 +470,8 @@
 				04BFEB961E27D0C80020F4B6 /* Simple Deadlines */,
 				040F102B1E37A83C0016C666 /* Simple Deadlines iOS Widget */,
 				043E5EB61E37D84A0075056A /* Simple Deadlines Urgent Widget */,
+				043E5F1A1E3A304F0075056A /* SimpleDeadlinesWatchOS */,
+				043E5F261E3A30500075056A /* SimpleDeadlinesWatchOS Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -352,6 +490,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				043E5EBE1E37D84A0075056A /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		043E5F191E3A304F0075056A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				043E5F211E3A30500075056A /* Assets.xcassets in Resources */,
+				043E5F1F1E3A30500075056A /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		043E5F251E3A30500075056A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				043E5F311E3A30500075056A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +573,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		043E5F231E3A30500075056A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				043E5F3F1E3A3A1C0075056A /* TaskRow.swift in Sources */,
+				043E5F411E3A4A370075056A /* TaskDetailsInterfaceController.swift in Sources */,
+				043E5F2F1E3A30500075056A /* ExtensionDelegate.swift in Sources */,
+				043E5F2D1E3A30500075056A /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04BFEB931E27D0C80020F4B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -442,6 +608,16 @@
 			target = 043E5EB61E37D84A0075056A /* Simple Deadlines Urgent Widget */;
 			targetProxy = 043E5EC01E37D84A0075056A /* PBXContainerItemProxy */;
 		};
+		043E5F2A1E3A30500075056A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 043E5F261E3A30500075056A /* SimpleDeadlinesWatchOS Extension */;
+			targetProxy = 043E5F291E3A30500075056A /* PBXContainerItemProxy */;
+		};
+		043E5F341E3A30500075056A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 043E5F1A1E3A304F0075056A /* SimpleDeadlinesWatchOS */;
+			targetProxy = 043E5F331E3A30500075056A /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -459,6 +635,14 @@
 				043E5EBD1E37D84A0075056A /* Base */,
 			);
 			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		043E5F1D1E3A30500075056A /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				043E5F1E1E3A30500075056A /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 		04BFEB9E1E27D0C80020F4B6 /* Main.storyboard */ = {
@@ -537,6 +721,76 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		043E5F361E3A30500075056A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y7US3C769A;
+				IBSC_MODULE = SimpleDeadlinesWatchOS_Extension;
+				INFOPLIST_FILE = SimpleDeadlinesWatchOS/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.auroralab.Simple-Deadlines.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		043E5F371E3A30500075056A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y7US3C769A;
+				IBSC_MODULE = SimpleDeadlinesWatchOS_Extension;
+				INFOPLIST_FILE = SimpleDeadlinesWatchOS/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.auroralab.Simple-Deadlines.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
+		043E5F381E3A30500075056A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = Y7US3C769A;
+				INFOPLIST_FILE = "SimpleDeadlinesWatchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.auroralab.Simple-Deadlines.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		043E5F391E3A30500075056A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = Y7US3C769A;
+				INFOPLIST_FILE = "SimpleDeadlinesWatchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.auroralab.Simple-Deadlines.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
 			};
 			name = Release;
 		};
@@ -688,6 +942,23 @@
 			buildConfigurations = (
 				043E5EC31E37D84A0075056A /* Debug */,
 				043E5EC41E37D84A0075056A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		043E5F3A1E3A30500075056A /* Build configuration list for PBXNativeTarget "SimpleDeadlinesWatchOS Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				043E5F381E3A30500075056A /* Debug */,
+				043E5F391E3A30500075056A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		043E5F3C1E3A30500075056A /* Build configuration list for PBXNativeTarget "SimpleDeadlinesWatchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				043E5F361E3A30500075056A /* Debug */,
+				043E5F371E3A30500075056A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

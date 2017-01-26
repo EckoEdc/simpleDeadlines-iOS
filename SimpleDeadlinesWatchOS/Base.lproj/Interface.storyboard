@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+    </dependencies>
+    <scenes>
+        <!--Deadlines-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="Deadlines" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SimpleDeadlinesWatchOS" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="3pI-8n-ji7">
+                            <items>
+                                <tableRow identifier="taskRow" id="5JT-ok-a85" customClass="TaskRow" customModule="SimpleDeadlinesWatchOS_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="C1m-ly-o8k">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Title" id="0uD-HN-fon"/>
+                                        </items>
+                                        <connections>
+                                            <segue destination="5e3-CK-m4J" kind="push" identifier="taskDetails" id="FR0-ox-064"/>
+                                        </connections>
+                                    </group>
+                                    <connections>
+                                        <outlet property="rowGroup" destination="C1m-ly-o8k" id="i9B-wh-ec4"/>
+                                        <outlet property="titleLabel" destination="0uD-HN-fon" id="pEu-CG-mj0"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tableView" destination="3pI-8n-ji7" id="IU2-ke-rJB"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="92" y="119"/>
+        </scene>
+        <!--Deadlines-->
+        <scene sceneID="wy3-JR-cBd">
+            <objects>
+                <controller title="Deadlines" id="5e3-CK-m4J" customClass="TaskDetailsInterfaceController" customModule="SimpleDeadlinesWatchOS_Extension">
+                    <items>
+                        <label alignment="left" verticalAlignment="center" text="Title" id="MDF-mN-Tro"/>
+                        <label alignment="left" verticalAlignment="center" text="Category" id="kIH-VB-GkH"/>
+                        <label alignment="left" verticalAlignment="center" text="0 Days Left" id="dGk-Dk-fSo"/>
+                        <button width="1" alignment="left" verticalAlignment="center" title="Done" id="fO5-QL-Z4u">
+                            <connections>
+                                <action selector="onDoneTapped" destination="5e3-CK-m4J" id="DBp-uK-vtn"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="categoryLabel" destination="kIH-VB-GkH" id="62D-fz-Ogb"/>
+                        <outlet property="daysLeftLabel" destination="dGk-Dk-fSo" id="U4C-7h-qqv"/>
+                        <outlet property="titleLabel" destination="MDF-mN-Tro" id="gcK-tr-9bp"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="365" y="119"/>
+        </scene>
+    </scenes>
+</document>
