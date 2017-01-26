@@ -111,7 +111,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZGe-fH-Bn8">
                                 <rect key="frame" x="16" y="188" width="343" height="291"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleAspectFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Za1-op-Gat">
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Za1-op-Gat">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="65"/>
                                         <subviews>
                                             <view contentMode="left" translatesAutoresizingMaskIntoConstraints="NO" id="9li-mj-wJh" customClass="CircleCounterView" customModule="LibSimpleDeadlines">
