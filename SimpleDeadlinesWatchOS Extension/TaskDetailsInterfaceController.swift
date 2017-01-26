@@ -44,10 +44,9 @@ class TaskDetailsInterfaceController: WKInterfaceController {
 
     @IBAction func onDoneTapped() {
         session?.sendMessage(["TaskDone" : task["id"]!], replyHandler: { response in
-            self.pop()
         }, errorHandler: { (error) in
             print(error)
-            self.pop()
         })
+        self.pop()
     }
 }
