@@ -29,6 +29,7 @@
 		043E5F351E3A30500075056A /* SimpleDeadlinesWatchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 043E5F1B1E3A304F0075056A /* SimpleDeadlinesWatchOS.app */; };
 		043E5F3F1E3A3A1C0075056A /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E5F3E1E3A3A1C0075056A /* TaskRow.swift */; };
 		043E5F411E3A4A370075056A /* TaskDetailsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E5F401E3A4A370075056A /* TaskDetailsInterfaceController.swift */; };
+		043E5F471E3A69620075056A /* CategoryInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E5F461E3A69620075056A /* CategoryInterfaceController.swift */; };
 		04BFEB9B1E27D0C80020F4B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFEB9A1E27D0C80020F4B6 /* AppDelegate.swift */; };
 		04BFEBA01E27D0C80020F4B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BFEB9E1E27D0C80020F4B6 /* Main.storyboard */; };
 		04BFEBA21E27D0C80020F4B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BFEBA11E27D0C80020F4B6 /* Assets.xcassets */; };
@@ -150,6 +151,7 @@
 		043E5F321E3A30500075056A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		043E5F3E1E3A3A1C0075056A /* TaskRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
 		043E5F401E3A4A370075056A /* TaskDetailsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailsInterfaceController.swift; sourceTree = "<group>"; };
+		043E5F461E3A69620075056A /* CategoryInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryInterfaceController.swift; sourceTree = "<group>"; };
 		04BFEB971E27D0C80020F4B6 /* Simple Deadlines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Deadlines.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BFEB9A1E27D0C80020F4B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04BFEB9F1E27D0C80020F4B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				043E5F321E3A30500075056A /* Info.plist */,
 				043E5F3E1E3A3A1C0075056A /* TaskRow.swift */,
 				043E5F401E3A4A370075056A /* TaskDetailsInterfaceController.swift */,
+				043E5F461E3A69620075056A /* CategoryInterfaceController.swift */,
 			);
 			path = "SimpleDeadlinesWatchOS Extension";
 			sourceTree = "<group>";
@@ -579,6 +582,7 @@
 			files = (
 				043E5F3F1E3A3A1C0075056A /* TaskRow.swift in Sources */,
 				043E5F411E3A4A370075056A /* TaskDetailsInterfaceController.swift in Sources */,
+				043E5F471E3A69620075056A /* CategoryInterfaceController.swift in Sources */,
 				043E5F2F1E3A30500075056A /* ExtensionDelegate.swift in Sources */,
 				043E5F2D1E3A30500075056A /* InterfaceController.swift in Sources */,
 			);

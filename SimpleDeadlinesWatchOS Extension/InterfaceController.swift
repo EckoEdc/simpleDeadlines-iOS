@@ -20,12 +20,18 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             
             for i in 0 ..< self.tasks.count {
                 if let row = self.tableView.rowController(at: i) as? TaskRow {
-                    print(self.tasks[i]["title"] as! String)
                     row.titleLabel.setText(self.tasks[i]["title"] as? String)
                     let color = NSKeyedUnarchiver.unarchiveObject(with: self.tasks[i]["color"] as! Data) as! UIColor
                     row.rowGroup.setBackgroundColor(color)
                 }
             }
+        }
+    }
+    
+    var category: [String] = ["All"]
+    var currentCategory: String = "All" {
+        didSet {
+            self.setTitle(currentCategory)
         }
     }
     
@@ -67,8 +73,13 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
     
     func getData() {
-        session?.sendMessage(["Tasks" : true], replyHandler: { response in
+        session?.sendMessage(["Tasks" : currentCategory, "Category" : true], replyHandler: { response in
             self.tasks = (response["Tasks"] as! [[String: Any]])
+        }, errorHandler: { (error) in
+            print(error)
+        })
+        session?.sendMessage(["Category" : true], replyHandler: { response in
+            self.category = ["All"] + (response["Category"] as! [String])
         }, errorHandler: { (error) in
             print(error)
         })
@@ -81,5 +92,9 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         default:
             return nil
         }
+    }
+    
+    @IBAction func onCategoryTouched() {
+        pushController(withName: "CategoryInterfaceController", context: self)
     }
 }
