@@ -12,18 +12,13 @@ import LibSimpleDeadlines
 
 class TodayViewController: UIViewController, NCWidgetProviding {
     
+    // MARK: - Outlets
     @IBOutlet weak var todayCounter: CircleCounterView!
     @IBOutlet weak var urgentCounter: CircleCounterView!
     @IBOutlet weak var worrycounter: CircleCounterView!
     @IBOutlet weak var niceCounter: CircleCounterView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+    // MARK : - Widget Update func
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         

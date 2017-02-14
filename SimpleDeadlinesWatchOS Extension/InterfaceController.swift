@@ -46,14 +46,13 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
-        if WCSession.isSupported() {
-            session = WCSession.default()
-        }
     }
     
     override func willActivate() {
         super.willActivate()
+        if WCSession.isSupported() {
+            session = WCSession.default()
+        }
         getData()
     }
     

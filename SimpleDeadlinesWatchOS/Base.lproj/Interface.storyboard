@@ -46,7 +46,7 @@
                                 <tableRow identifier="taskRow" id="5JT-ok-a85" customClass="TaskRow" customModule="SimpleDeadlinesWatchOS_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="C1m-ly-o8k">
                                         <items>
-                                            <label alignment="left" verticalAlignment="center" text="Title" id="0uD-HN-fon"/>
+                                            <label alignment="left" verticalAlignment="center" text="Title" numberOfLines="0" id="0uD-HN-fon"/>
                                         </items>
                                         <connections>
                                             <segue destination="5e3-CK-m4J" kind="push" identifier="taskDetails" id="FR0-ox-064"/>
@@ -81,7 +81,7 @@
             <objects>
                 <controller title="Deadlines" id="5e3-CK-m4J" customClass="TaskDetailsInterfaceController" customModule="SimpleDeadlinesWatchOS_Extension">
                     <items>
-                        <label alignment="left" verticalAlignment="center" text="Title" id="MDF-mN-Tro"/>
+                        <label alignment="left" verticalAlignment="center" text="Title" numberOfLines="0" id="MDF-mN-Tro"/>
                         <label alignment="left" verticalAlignment="center" text="Category" id="kIH-VB-GkH"/>
                         <label alignment="left" verticalAlignment="center" text="0 Days Left" id="dGk-Dk-fSo"/>
                         <button width="1" alignment="left" verticalAlignment="center" title="Done" id="fO5-QL-Z4u">

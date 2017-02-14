@@ -12,23 +12,19 @@ import LibSimpleDeadlines
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
-    var fetchedResultsController = TasksService.sharedInstance.getFetchedResultsController()
+    // MARK: - Properties
+    let fetchedResultsController = TasksService.sharedInstance.getFetchedResultsController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         fetchedResultsController.delegate = self
-        
         do {
             try fetchedResultsController.performFetch()
         } catch {
-            //TODO - Error Handling ?
+            //TODO - Error Handling
             print("Fetch Error")
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 
     // MARK: - Table view data source

@@ -11,14 +11,14 @@ import LibSimpleDeadlines
 
 class TaskTableViewCell: UITableViewCell {
 
+    // MARK: - Outlets
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var counterView: CircleCounterView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
+    // MARK: - Configure func
 
     func configureCell(task: Task) {
 
