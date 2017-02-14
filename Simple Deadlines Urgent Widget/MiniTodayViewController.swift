@@ -13,8 +13,13 @@ import CoreData
 
 class MiniTodayViewController: UIViewController, NCWidgetProviding, NSFetchedResultsControllerDelegate, UITableViewDataSource, UITableViewDelegate {
 
+    // MARK: - Properties
     let fetchedResultController = TasksService.sharedInstance.getFetchedResultsController(urgentOnly: true)
+    
+    // MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: - UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,32 +27,28 @@ class MiniTodayViewController: UIViewController, NCWidgetProviding, NSFetchedRes
         do {
             try fetchedResultController.performFetch()
         } catch {
+            //TODO
             print("ERROR")
         }
         self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
-        do {
-            try fetchedResultController.performFetch()
-        } catch {
-            print("ERROR")
-        }
-        completionHandler(NCUpdateResult.newData)
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         coordinator.animate(alongsideTransition: { context in
             self.tableView.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         }, completion: nil)
+    }
+    
+    // MARK: - Widget func
+    
+    func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
+        do {
+            try fetchedResultController.performFetch()
+        } catch {
+            //TODO
+            print("ERROR")
+        }
+        completionHandler(NCUpdateResult.newData)
     }
     
     func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {

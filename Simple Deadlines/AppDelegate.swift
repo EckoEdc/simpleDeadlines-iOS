@@ -12,7 +12,8 @@ import LibSimpleDeadlines
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
-    
+
+    // MARK: - Properties
     var window: UIWindow?
 
     var session: WCSession? {
@@ -23,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
             }
         }
     }
+    
+    // MARK: - WCSessionDelegate
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         
@@ -66,13 +69,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         }
     }
     
+    // MARK: - WC Message func
+    
     func sendReloadMsg() {
-        session?.sendMessage(["Reload" : true], replyHandler: { (response) in
-            
-        }) { (error) in
+        guard session != nil, session!.isReachable else {return}
+        
+        session?.sendMessage(["Reload" : true], replyHandler: { (response) in })
+        { (error) in
             print("Error")
         }
     }
+    
+    // MARK: - UIApplicationDelegate
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         if WCSession.isSupported() {

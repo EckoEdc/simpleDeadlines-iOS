@@ -11,12 +11,18 @@ import LibSimpleDeadlines
 
 class TaskDetailsViewController: UIViewController {
 
+    // MARK: - Outlets
+    
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var categoryTextField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var counterView: CircleCounterView!
     
+    // MARK: - Properties
+    
     var task: Task?
+    
+    // MARK: UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +37,6 @@ class TaskDetailsViewController: UIViewController {
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -46,17 +49,21 @@ class TaskDetailsViewController: UIViewController {
         task!.title = titleTextField.text
         task!.date = datePicker.date as NSDate
         if let catTitle = categoryTextField.text, !catTitle.isEmpty {
-            let category = TasksService.sharedInstance.getCategory(name: catTitle)
+            let category = TasksService.sharedInstance.getOrCreateCategory(name: catTitle)
             task?.category = category
         }
         (UIApplication.shared.delegate as! AppDelegate).sendReloadMsg()
         TasksService.sharedInstance.save()
     }
     
+    // MARK: - Actions
+    
     @IBAction func onDateChanged(_ sender: Any) {
         task?.date = datePicker.date as NSDate
         setupCircleCounter()
     }
+    
+    // MARK: Circle func
     
     func setupCircleCounter() {
         let remainData = task!.getRemainingDaysAndColor()

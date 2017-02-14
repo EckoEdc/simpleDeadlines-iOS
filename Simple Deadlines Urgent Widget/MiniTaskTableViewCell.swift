@@ -11,16 +11,11 @@ import LibSimpleDeadlines
 
 class MiniTaskTableViewCell: UITableViewCell {
 
+    // MARK: Outlets
     @IBOutlet weak var counterView: CircleCounterView!
     @IBOutlet weak var titleLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
+    //MARK: - Configure func
     
     func configureCell(task: Task) {
         let remainData = task.getRemainingDaysAndColor()
