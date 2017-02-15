@@ -116,4 +116,9 @@ class MiniTodayViewController: UIViewController, NCWidgetProviding, NSFetchedRes
         cell.configureCell(task: task)
         return cell
     }
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let appUrl = URL(string: "simpledeadlines://")!
+        extensionContext?.open(appUrl)
+    }
 }

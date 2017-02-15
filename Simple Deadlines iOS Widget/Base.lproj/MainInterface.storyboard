@@ -91,10 +91,14 @@
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="1F4-pR-zRf" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="MO0-T7-YJi"/>
                             <constraint firstItem="1F4-pR-zRf" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="Mhg-gp-pew"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="hBq-md-gyd" appends="YES" id="KPj-Hb-pDT"/>
+                        </connections>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -110,6 +114,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="hBq-md-gyd">
+                    <connections>
+                        <action selector="onTap:" destination="M4Y-Lb-cyx" id="23l-Cc-KON"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="16" y="27"/>
         </scene>
