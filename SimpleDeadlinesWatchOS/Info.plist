@@ -26,7 +26,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>org.auroralab.Simple-Deadlines</string>
+	<string>org.auroralab.SimpleDeadlines</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>

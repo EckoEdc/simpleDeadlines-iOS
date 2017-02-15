@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.org.auroralab.Simple-Deadlines</string>
+		<string>group.org.auroralab.Simple-Deadlines-Group</string>
 	</array>
 </dict>
 </plist>

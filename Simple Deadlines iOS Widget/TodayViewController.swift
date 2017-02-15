@@ -49,4 +49,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
         completionHandler(NCUpdateResult.newData)
     }
+    
+    @IBAction func onTap(_ sender: Any) {
+        let appUrl = URL(string: "simpledeadlines://")!
+        extensionContext?.open(appUrl)
+    }
 }
