@@ -81,10 +81,10 @@
             <objects>
                 <controller title="Deadlines" id="5e3-CK-m4J" customClass="TaskDetailsInterfaceController" customModule="SimpleDeadlinesWatchOS_Extension">
                     <items>
-                        <label alignment="left" verticalAlignment="center" text="Title" numberOfLines="0" id="MDF-mN-Tro"/>
-                        <label alignment="left" verticalAlignment="center" text="Category" id="kIH-VB-GkH"/>
-                        <label alignment="left" verticalAlignment="center" text="0 Days Left" id="dGk-Dk-fSo"/>
-                        <button width="1" alignment="left" verticalAlignment="center" title="Done" id="fO5-QL-Z4u">
+                        <label alignment="left" text="Title" numberOfLines="0" id="MDF-mN-Tro"/>
+                        <label alignment="left" text="Category" id="kIH-VB-GkH"/>
+                        <label alignment="left" text="0 Days Left" id="dGk-Dk-fSo"/>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Done" id="fO5-QL-Z4u">
                             <connections>
                                 <action selector="onDoneTapped" destination="5e3-CK-m4J" id="DBp-uK-vtn"/>
                             </connections>
