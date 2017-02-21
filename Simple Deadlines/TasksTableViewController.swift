@@ -136,6 +136,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
                 }
             }
         }
+        alertController.popoverPresentationController?.sourceView = sender
+        alertController.popoverPresentationController?.sourceRect = sender.bounds
         self.present(alertController, animated: true)
     }
     
