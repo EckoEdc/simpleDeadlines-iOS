@@ -67,6 +67,10 @@ class TaskDetailsViewController: UIViewController {
         _ = self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func onViewTap(_ sender: Any) {
+        view.endEditing(true)
+    }
+    
     // MARK: Circle func
     
     func setupCircleCounter() {
