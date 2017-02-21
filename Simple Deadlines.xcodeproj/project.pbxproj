@@ -30,12 +30,12 @@
 		043E5F3F1E3A3A1C0075056A /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E5F3E1E3A3A1C0075056A /* TaskRow.swift */; };
 		043E5F411E3A4A370075056A /* TaskDetailsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E5F401E3A4A370075056A /* TaskDetailsInterfaceController.swift */; };
 		043E5F471E3A69620075056A /* CategoryInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E5F461E3A69620075056A /* CategoryInterfaceController.swift */; };
+		0462CFC31E5BBA9200867D58 /* LibSimpleDeadlines.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0462CFC21E5BBA9200867D58 /* LibSimpleDeadlines.framework */; };
+		0462CFC41E5BBA9200867D58 /* LibSimpleDeadlines.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0462CFC21E5BBA9200867D58 /* LibSimpleDeadlines.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		04BFEB9B1E27D0C80020F4B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFEB9A1E27D0C80020F4B6 /* AppDelegate.swift */; };
 		04BFEBA01E27D0C80020F4B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BFEB9E1E27D0C80020F4B6 /* Main.storyboard */; };
 		04BFEBA21E27D0C80020F4B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BFEBA11E27D0C80020F4B6 /* Assets.xcassets */; };
 		04BFEBA51E27D0C80020F4B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BFEBA31E27D0C80020F4B6 /* LaunchScreen.storyboard */; };
-		04BFEBE31E27D6AD0020F4B6 /* LibSimpleDeadlines.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BFEBE21E27D6AD0020F4B6 /* LibSimpleDeadlines.framework */; };
-		04BFEBE41E27D6AD0020F4B6 /* LibSimpleDeadlines.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04BFEBE21E27D6AD0020F4B6 /* LibSimpleDeadlines.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		04BFEC021E27E26A0020F4B6 /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFEC011E27E26A0020F4B6 /* TasksTableViewController.swift */; };
 		04BFEC051E27E4E40020F4B6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BFEC041E27E4E40020F4B6 /* CoreData.framework */; };
 		04BFEC071E27ED870020F4B6 /* TaskDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFEC061E27ED870020F4B6 /* TaskDetailsViewController.swift */; };
@@ -114,7 +114,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				04BFEBE41E27D6AD0020F4B6 /* LibSimpleDeadlines.framework in Embed Frameworks */,
+				0462CFC41E5BBA9200867D58 /* LibSimpleDeadlines.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,13 +152,13 @@
 		043E5F3E1E3A3A1C0075056A /* TaskRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
 		043E5F401E3A4A370075056A /* TaskDetailsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailsInterfaceController.swift; sourceTree = "<group>"; };
 		043E5F461E3A69620075056A /* CategoryInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryInterfaceController.swift; sourceTree = "<group>"; };
+		0462CFC21E5BBA9200867D58 /* LibSimpleDeadlines.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LibSimpleDeadlines.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BFEB971E27D0C80020F4B6 /* Simple Deadlines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Deadlines.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BFEB9A1E27D0C80020F4B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04BFEB9F1E27D0C80020F4B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04BFEBA11E27D0C80020F4B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04BFEBA41E27D0C80020F4B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04BFEBA61E27D0C80020F4B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04BFEBE21E27D6AD0020F4B6 /* LibSimpleDeadlines.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LibSimpleDeadlines.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BFEC011E27E26A0020F4B6 /* TasksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
 		04BFEC041E27E4E40020F4B6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		04BFEC061E27ED870020F4B6 /* TaskDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailsViewController.swift; sourceTree = "<group>"; };
@@ -196,8 +196,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				04BFEC051E27E4E40020F4B6 /* CoreData.framework in Frameworks */,
-				04BFEBE31E27D6AD0020F4B6 /* LibSimpleDeadlines.framework in Frameworks */,
 				040F105F1E37CDBB0016C666 /* DateHelper.framework in Frameworks */,
+				0462CFC31E5BBA9200867D58 /* LibSimpleDeadlines.framework in Frameworks */,
 				040F105E1E37CDB70016C666 /* AERecord.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,8 +255,8 @@
 		04BFEB8E1E27D0C80020F4B6 = {
 			isa = PBXGroup;
 			children = (
+				0462CFC21E5BBA9200867D58 /* LibSimpleDeadlines.framework */,
 				040F10461E37BFCF0016C666 /* Simple Deadlines iOS Widget.entitlements */,
-				04BFEBE21E27D6AD0020F4B6 /* LibSimpleDeadlines.framework */,
 				04BFEB991E27D0C80020F4B6 /* Simple Deadlines */,
 				040F102F1E37A83C0016C666 /* Simple Deadlines iOS Widget Summary */,
 				043E5EB91E37D84A0075056A /* Simple Deadlines Urgent Widget */,
@@ -319,7 +319,6 @@
 				040F10281E37A83C0016C666 /* Sources */,
 				040F10291E37A83C0016C666 /* Frameworks */,
 				040F102A1E37A83C0016C666 /* Resources */,
-				040F10591E37CA400016C666 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -526,21 +525,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		040F10591E37CA400016C666 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/AERecord.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/DateHelper.framework",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
 		040F10601E37CDC70016C666 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
