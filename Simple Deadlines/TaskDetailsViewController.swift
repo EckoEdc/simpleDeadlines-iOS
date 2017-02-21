@@ -63,6 +63,10 @@ class TaskDetailsViewController: UIViewController {
         setupCircleCounter()
     }
     
+    @IBAction func textFieldPrimaryActionTriggered(_ sender: Any) {
+        _ = self.navigationController?.popViewController(animated: true)
+    }
+    
     // MARK: Circle func
     
     func setupCircleCounter() {
