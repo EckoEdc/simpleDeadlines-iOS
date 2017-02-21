@@ -14,10 +14,10 @@ class TaskDetailsViewController: UIViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var titleTextField: UITextField!
-    @IBOutlet weak var categoryTextField: UITextField!
+    @IBOutlet weak var categoryTextField: AutocompleteField!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var counterView: CircleCounterView!
-    
+
     // MARK: - Properties
     
     var task: Task?
@@ -35,6 +35,12 @@ class TaskDetailsViewController: UIViewController {
         } else {
             task = TasksService.sharedInstance.getNewTask()
         }
+        
+        if let category = TasksService.sharedInstance.getAllCategory() {
+            categoryTextField.suggestions = category.map({ (category) -> String in
+                return category.name!
+            })
+        }
     }
 
     
@@ -46,10 +52,10 @@ class TaskDetailsViewController: UIViewController {
             return
         }
         
-        task!.title = titleTextField.text
+        task!.title = titleTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         task!.date = datePicker.date as NSDate
         if let catTitle = categoryTextField.text, !catTitle.isEmpty {
-            let category = TasksService.sharedInstance.getOrCreateCategory(name: catTitle)
+            let category = TasksService.sharedInstance.getOrCreateCategory(name: catTitle.trimmingCharacters(in: .whitespacesAndNewlines))
             task?.category = category
         }
         (UIApplication.shared.delegate as! AppDelegate).sendReloadMsg()
@@ -64,7 +70,14 @@ class TaskDetailsViewController: UIViewController {
     }
     
     @IBAction func textFieldPrimaryActionTriggered(_ sender: Any) {
-        _ = self.navigationController?.popViewController(animated: true)
+        view.endEditing(true)
+    }
+    
+    @IBAction func categoryPrimaryActionTriggered(_ sender: AutocompleteField) {
+        if let suggestion = sender.suggestion {
+            sender.text = suggestion
+        }
+        view.endEditing(true)
     }
     
     @IBAction func onViewTap(_ sender: Any) {
