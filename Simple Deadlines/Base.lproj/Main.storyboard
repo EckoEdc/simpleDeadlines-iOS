@@ -155,13 +155,13 @@
                                                             <action selector="textFieldPrimaryActionTriggered:" destination="ien-A2-YrX" eventType="primaryActionTriggered" id="JDd-zH-hgt"/>
                                                         </connections>
                                                     </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qXz-j4-ehe">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qXz-j4-ehe" customClass="AutocompleteField" customModule="Simple_Deadlines" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="34" width="288" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
-                                                            <action selector="textFieldPrimaryActionTriggered:" destination="ien-A2-YrX" eventType="primaryActionTriggered" id="RAW-xC-2xh"/>
+                                                            <action selector="categoryPrimaryActionTriggered:" destination="ien-A2-YrX" eventType="primaryActionTriggered" id="qbg-ji-g69"/>
                                                         </connections>
                                                     </textField>
                                                 </subviews>
@@ -197,7 +197,7 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="categoryTextField" destination="qXz-j4-ehe" id="uFC-FB-bv3"/>
+                        <outlet property="categoryTextField" destination="qXz-j4-ehe" id="CE6-5o-GgQ"/>
                         <outlet property="counterView" destination="9li-mj-wJh" id="DFm-jF-Vpz"/>
                         <outlet property="datePicker" destination="7p4-ay-Z5L" id="4xR-Gl-Zyg"/>
                         <outlet property="titleTextField" destination="YrW-L1-waA" id="7p7-dr-afD"/>
