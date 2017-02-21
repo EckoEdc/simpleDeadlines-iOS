@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SRg-F8-tbH" id="MGQ-yH-Bd5">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUT-3o-SDb">
@@ -136,12 +136,18 @@
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="textFieldPrimaryActionTriggered:" destination="ien-A2-YrX" eventType="primaryActionTriggered" id="JDd-zH-hgt"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qXz-j4-ehe">
                                                         <rect key="frame" x="0.0" y="34" width="288" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="textFieldPrimaryActionTriggered:" destination="ien-A2-YrX" eventType="primaryActionTriggered" id="RAW-xC-2xh"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -164,12 +170,16 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="ZGe-fH-Bn8" secondAttribute="trailing" id="ISG-D2-ep8"/>
                             <constraint firstItem="ZGe-fH-Bn8" firstAttribute="centerY" secondItem="J7a-gi-lys" secondAttribute="centerY" id="aYg-84-Zhy"/>
                             <constraint firstItem="ZGe-fH-Bn8" firstAttribute="centerX" secondItem="J7a-gi-lys" secondAttribute="centerX" id="h8d-zr-vhN"/>
                             <constraint firstItem="ZGe-fH-Bn8" firstAttribute="leading" secondItem="J7a-gi-lys" secondAttribute="leadingMargin" id="vxC-Rw-9YD"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="8LP-wH-lbE" appends="YES" id="E0O-4J-NxC"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="categoryTextField" destination="qXz-j4-ehe" id="uFC-FB-bv3"/>
@@ -179,6 +189,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zbk-Oc-Ldp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="8LP-wH-lbE">
+                    <connections>
+                        <action selector="onViewTap:" destination="ien-A2-YrX" id="FjK-bW-U2G"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1277.5999999999999" y="119.1904047976012"/>
         </scene>
