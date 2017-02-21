@@ -26,38 +26,54 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUT-3o-SDb">
-                                            <rect key="frame" x="59" y="8" width="308" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUT-3o-SDb">
+                                            <rect key="frame" x="66" y="8" width="308" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O0K-ia-RB9" customClass="CircleCounterView" customModule="LibSimpleDeadlines">
-                                            <rect key="frame" x="8" y="8" width="43" height="43"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0K-ia-RB9" customClass="CircleCounterView" customModule="LibSimpleDeadlines">
+                                            <rect key="frame" x="8" y="5" width="50" height="50"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="NIV-Oi-1dt"/>
+                                                <constraint firstAttribute="height" constant="50" id="TDA-73-vf9"/>
+                                            </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="dayRemaining">
                                                     <integer key="value" value="0"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iz0-eX-xUP">
-                                            <rect key="frame" x="59" y="30" width="195" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
-                                            <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSi-eh-zY0">
-                                            <rect key="frame" x="267" y="31" width="100" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E2d-uE-q2V">
+                                            <rect key="frame" x="66" y="35" width="301" height="17"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iz0-eX-xUP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="59.5" height="17"/>
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                                    <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSi-eh-zY0">
+                                                    <rect key="frame" x="59.5" y="0.0" width="241.5" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="LUT-3o-SDb" secondAttribute="trailing" constant="1" id="3xG-lJ-MZn"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="E2d-uE-q2V" secondAttribute="trailing" id="9zy-Hn-lvT"/>
+                                        <constraint firstItem="LUT-3o-SDb" firstAttribute="top" secondItem="MGQ-yH-Bd5" secondAttribute="top" constant="8" id="HvD-Am-nNQ"/>
+                                        <constraint firstItem="O0K-ia-RB9" firstAttribute="centerY" secondItem="MGQ-yH-Bd5" secondAttribute="centerY" id="NBX-ap-tuT"/>
+                                        <constraint firstItem="LUT-3o-SDb" firstAttribute="leading" secondItem="O0K-ia-RB9" secondAttribute="trailing" constant="8" id="QOp-w7-V9C"/>
+                                        <constraint firstItem="E2d-uE-q2V" firstAttribute="top" secondItem="LUT-3o-SDb" secondAttribute="bottom" constant="6.5" id="VMG-bJ-5Pj"/>
+                                        <constraint firstItem="O0K-ia-RB9" firstAttribute="leading" secondItem="MGQ-yH-Bd5" secondAttribute="leading" constant="8" id="lig-Kp-4ye"/>
+                                        <constraint firstItem="E2d-uE-q2V" firstAttribute="leading" secondItem="O0K-ia-RB9" secondAttribute="trailing" constant="8" id="ney-Xz-2fw"/>
+                                        <constraint firstItem="O0K-ia-RB9" firstAttribute="top" secondItem="MGQ-yH-Bd5" secondAttribute="top" constant="5" id="qPv-dv-dOW"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="categoryLabel" destination="Iz0-eX-xUP" id="dOU-Bc-853"/>
