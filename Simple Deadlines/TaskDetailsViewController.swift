@@ -74,7 +74,7 @@ class TaskDetailsViewController: UIViewController {
     }
     
     @IBAction func categoryPrimaryActionTriggered(_ sender: AutocompleteField) {
-        if let suggestion = sender.suggestion {
+        if let suggestion = sender.suggestion, !suggestion.isEmpty {
             sender.text = suggestion
         }
         view.endEditing(true)
