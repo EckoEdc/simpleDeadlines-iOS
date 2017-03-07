@@ -51,9 +51,13 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     override func willActivate() {
         super.willActivate()
         if WCSession.isSupported() {
-            session = WCSession.default()
+            
+            if let session = session, session.activationState == .activated {
+                getData()
+            } else {
+                self.session = WCSession.default()
+            }
         }
-        getData()
     }
     
     override func didDeactivate() {
@@ -61,7 +65,11 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        
+        if error == nil {
+            getData()
+        } else {
+            print(error!.localizedDescription)
+        }
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
@@ -73,12 +81,16 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     func getData() {
         session?.sendMessage(["Tasks" : currentCategory, "Category" : true], replyHandler: { response in
-            self.tasks = (response["Tasks"] as! [[String: Any]])
+            DispatchQueue.main.async {
+                self.tasks = (response["Tasks"] as! [[String: Any]])
+            }
         }, errorHandler: { (error) in
             print(error)
         })
         session?.sendMessage(["Category" : true], replyHandler: { response in
-            self.category = ["All"] + (response["Category"] as! [String])
+            DispatchQueue.main.async {
+                self.category = ["All"] + (response["Category"] as! [String])
+            }
         }, errorHandler: { (error) in
             print(error)
         })
