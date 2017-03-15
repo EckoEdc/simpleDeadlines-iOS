@@ -32,7 +32,7 @@ class TaskDetailsViewController: UIViewController {
             categoryTextField.text = t.category?.name
             datePicker.setDate(Date(timeIntervalSince1970: t.date!.timeIntervalSince1970), animated: false)
             setupCircleCounter()
-            NotificationHelper.sharedInstance.removeNotification(for: t)
+            NotificationHelper.sharedInstance.removeNotification(for: t.title!)
         } else {
             task = TasksService.sharedInstance.getNewTask()
         }
