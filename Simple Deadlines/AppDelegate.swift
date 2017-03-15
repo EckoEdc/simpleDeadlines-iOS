@@ -9,6 +9,7 @@
 import UIKit
 import WatchConnectivity
 import LibSimpleDeadlines
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
@@ -85,6 +86,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         if WCSession.isSupported() {
             session = WCSession.default()
+        }
+        
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.badge]) { (granted, error) in
+            if !granted {
+                print("\(error)")
+            }
         }
         return true
     }
