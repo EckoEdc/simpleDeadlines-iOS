@@ -20,18 +20,18 @@ class NotificationHelper: TaskEventsDelegate {
         TasksService.sharedInstance.taskEventsDelegate = self
     }
     
-    func onDoneOrDelete(task: Task) {
-        removeNotification(for: task)
+    func onDoneOrDelete(taskID: String) {
+        removeNotification(for: taskID)
     }
     
-    func removeNotification(for task: Task) {
+    func removeNotification(for taskID: String) {
         
         let center = UNUserNotificationCenter.current()
         center.getPendingNotificationRequests { (notifArray) in
             if notifArray.contains(where: { (request) -> Bool in
-                request.identifier == task.title!
+                request.identifier == taskID
             }) {
-                center.removePendingNotificationRequests(withIdentifiers: [task.title!])
+                center.removePendingNotificationRequests(withIdentifiers: [taskID])
             } else {
                  self.setBadgeNumber()
             }
