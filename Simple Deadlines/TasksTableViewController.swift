@@ -15,8 +15,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     // MARK: - Properties
     let fetchedResultsController = TasksService.sharedInstance.getFetchedResultsController()
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         fetchedResultsController.delegate = self
         do {
