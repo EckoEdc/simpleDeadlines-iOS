@@ -91,7 +91,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.badge]) { (granted, error) in
             if !granted {
-                print("\(error)")
+                print("\(error!)")
             }
         }
         return true

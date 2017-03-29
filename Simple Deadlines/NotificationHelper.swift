@@ -43,7 +43,7 @@ class NotificationHelper: TaskEventsDelegate {
         let number = (content.badge?.intValue ?? 0) + 1
         content.badge = NSNumber(integerLiteral: number)
         
-        let triggerDate = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second,], from: (task.date as! Date).dateAtStartOfDay())
+        let triggerDate = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second,], from: (task.date! as Date).dateFor(.startOfDay))
         let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
         
         let center = UNUserNotificationCenter.current()
