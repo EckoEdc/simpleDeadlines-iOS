@@ -18,7 +18,6 @@
 		043E5EBB1E37D84A0075056A /* MiniTodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E5EBA1E37D84A0075056A /* MiniTodayViewController.swift */; };
 		043E5EBE1E37D84A0075056A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043E5EBC1E37D84A0075056A /* MainInterface.storyboard */; };
 		043E5EC21E37D84A0075056A /* Simple Deadlines Urgent Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 043E5EB71E37D84A0075056A /* Simple Deadlines Urgent Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		043E5EC61E37D85D0075056A /* LibSimpleDeadlines.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040F10411E37B2890016C666 /* LibSimpleDeadlines.framework */; };
 		043E5EC91E37DF0B0075056A /* MiniTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E5EC81E37DF0B0075056A /* MiniTaskTableViewCell.swift */; };
 		043E5F1F1E3A30500075056A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043E5F1D1E3A30500075056A /* Interface.storyboard */; };
 		043E5F211E3A30500075056A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043E5F201E3A30500075056A /* Assets.xcassets */; };
@@ -31,8 +30,8 @@
 		043E5F411E3A4A370075056A /* TaskDetailsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E5F401E3A4A370075056A /* TaskDetailsInterfaceController.swift */; };
 		043E5F471E3A69620075056A /* CategoryInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E5F461E3A69620075056A /* CategoryInterfaceController.swift */; };
 		0451FF7C1E5C983100DC11E5 /* AutocompleteField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451FF7B1E5C983100DC11E5 /* AutocompleteField.swift */; };
-		0462CFC31E5BBA9200867D58 /* LibSimpleDeadlines.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0462CFC21E5BBA9200867D58 /* LibSimpleDeadlines.framework */; };
-		0462CFC41E5BBA9200867D58 /* LibSimpleDeadlines.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0462CFC21E5BBA9200867D58 /* LibSimpleDeadlines.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		048D11121E9400D500C590C6 /* LibSimpleDeadlines.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048D11101E94009500C590C6 /* LibSimpleDeadlines.framework */; };
+		048D11131E94010900C590C6 /* LibSimpleDeadlines.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048D11101E94009500C590C6 /* LibSimpleDeadlines.framework */; };
 		04A541151E79968A00E9F51D /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A541141E79968A00E9F51D /* NotificationHelper.swift */; };
 		04BFEB9B1E27D0C80020F4B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFEB9A1E27D0C80020F4B6 /* AppDelegate.swift */; };
 		04BFEBA01E27D0C80020F4B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BFEB9E1E27D0C80020F4B6 /* Main.storyboard */; };
@@ -110,17 +109,6 @@
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		04BFEBC61E27D1720020F4B6 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				0462CFC41E5BBA9200867D58 /* LibSimpleDeadlines.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -155,7 +143,7 @@
 		043E5F401E3A4A370075056A /* TaskDetailsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailsInterfaceController.swift; sourceTree = "<group>"; };
 		043E5F461E3A69620075056A /* CategoryInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryInterfaceController.swift; sourceTree = "<group>"; };
 		0451FF7B1E5C983100DC11E5 /* AutocompleteField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutocompleteField.swift; sourceTree = "<group>"; };
-		0462CFC21E5BBA9200867D58 /* LibSimpleDeadlines.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LibSimpleDeadlines.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		048D11101E94009500C590C6 /* LibSimpleDeadlines.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LibSimpleDeadlines.framework; path = Carthage/Build/iOS/LibSimpleDeadlines.framework; sourceTree = "<group>"; };
 		04A541141E79968A00E9F51D /* NotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		04BFEB971E27D0C80020F4B6 /* Simple Deadlines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Deadlines.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BFEB9A1E27D0C80020F4B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -183,7 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				043E5EC61E37D85D0075056A /* LibSimpleDeadlines.framework in Frameworks */,
+				048D11131E94010900C590C6 /* LibSimpleDeadlines.framework in Frameworks */,
 				043E5EB81E37D84A0075056A /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,9 +187,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048D11121E9400D500C590C6 /* LibSimpleDeadlines.framework in Frameworks */,
 				04BFEC051E27E4E40020F4B6 /* CoreData.framework in Frameworks */,
 				040F105F1E37CDBB0016C666 /* DateHelper.framework in Frameworks */,
-				0462CFC31E5BBA9200867D58 /* LibSimpleDeadlines.framework in Frameworks */,
 				040F105E1E37CDB70016C666 /* AERecord.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,7 +255,6 @@
 		04BFEB8E1E27D0C80020F4B6 = {
 			isa = PBXGroup;
 			children = (
-				0462CFC21E5BBA9200867D58 /* LibSimpleDeadlines.framework */,
 				040F10461E37BFCF0016C666 /* Simple Deadlines iOS Widget.entitlements */,
 				04BFEB991E27D0C80020F4B6 /* Simple Deadlines */,
 				040F102F1E37A83C0016C666 /* Simple Deadlines iOS Widget Summary */,
@@ -312,6 +299,7 @@
 		04BFEC031E27E4E40020F4B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				048D11101E94009500C590C6 /* LibSimpleDeadlines.framework */,
 				040F10571E37CA390016C666 /* DateHelper.framework */,
 				040F10551E37CA360016C666 /* AERecord.framework */,
 				040F104B1E37C71B0016C666 /* DateHelper.framework */,
@@ -401,7 +389,6 @@
 				04BFEB931E27D0C80020F4B6 /* Sources */,
 				04BFEB941E27D0C80020F4B6 /* Frameworks */,
 				04BFEB951E27D0C80020F4B6 /* Resources */,
-				04BFEBC61E27D1720020F4B6 /* Embed Frameworks */,
 				040F103C1E37A83C0016C666 /* Embed App Extensions */,
 				040F10601E37CDC70016C666 /* ShellScript */,
 				043E5F3D1E3A30500075056A /* Embed Watch Content */,
@@ -547,6 +534,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/AERecord.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/DateHelper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/LibSimpleDeadlines.framework",
 			);
 			outputPaths = (
 			);
@@ -705,6 +693,10 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Simple Deadlines Urgent Widget/Simple Deadlines Urgent Widget.entitlements";
 				DEVELOPMENT_TEAM = C9DZF63XTA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Simple Deadlines Urgent Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.auroralab.SimpleDeadlines.Simple-Deadlines-Urgent-Widget";
@@ -719,6 +711,10 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Simple Deadlines Urgent Widget/Simple Deadlines Urgent Widget.entitlements";
 				DEVELOPMENT_TEAM = C9DZF63XTA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Simple Deadlines Urgent Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.auroralab.SimpleDeadlines.Simple-Deadlines-Urgent-Widget";
