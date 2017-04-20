@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="47v-zj-Pgx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="47v-zj-Pgx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SRg-F8-tbH" id="MGQ-yH-Bd5">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUT-3o-SDb">
@@ -79,7 +79,7 @@
                                     <outlet property="counterView" destination="O0K-ia-RB9" id="CuF-77-rHh"/>
                                     <outlet property="dateLabel" destination="OSi-eh-zY0" id="bde-sF-7bK"/>
                                     <outlet property="nameLabel" destination="LUT-3o-SDb" id="Nxs-ZZ-hJi"/>
-                                    <segue destination="ien-A2-YrX" kind="show" identifier="showTask" id="5Ju-MS-OhR"/>
+                                    <segue destination="ien-A2-YrX" kind="presentation" identifier="showTask" modalPresentationStyle="formSheet" id="5Ju-MS-OhR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -92,7 +92,7 @@
                     <navigationItem key="navigationItem" id="feP-Hk-FmN">
                         <nil key="title"/>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ouB-DZ-oYh">
-                            <rect key="frame" x="113" y="7" width="150" height="30"/>
+                            <rect key="frame" x="112.5" y="7" width="150" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                             <state key="normal" title="All"/>
@@ -103,7 +103,7 @@
                         <barButtonItem key="rightBarButtonItem" title="+" id="5a1-89-sNr">
                             <connections>
                                 <action selector="addTaskButtonTapped:" destination="uNJ-dp-iZf" id="ay2-Ga-eqW"/>
-                                <segue destination="ien-A2-YrX" kind="show" identifier="addTask" id="dKs-zy-olv"/>
+                                <segue destination="ien-A2-YrX" kind="presentation" identifier="addTask" modalPresentationStyle="formSheet" id="dKs-zy-olv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -183,6 +183,24 @@
                                     </datePicker>
                                 </subviews>
                             </stackView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HGn-cX-hlO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="anc-0J-9GZ">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="h8p-mV-65m">
+                                            <connections>
+                                                <action selector="onCancelTapped:" destination="ien-A2-YrX" id="Dcu-M8-IDg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="p4s-oQ-r9d">
+                                            <connections>
+                                                <action selector="onDoneTapped:" destination="ien-A2-YrX" id="AR8-eL-MND"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -230,6 +248,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="5Ju-MS-OhR"/>
+        <segue reference="dKs-zy-olv"/>
     </inferredMetricsTieBreakers>
 </document>

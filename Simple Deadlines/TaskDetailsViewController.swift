@@ -21,6 +21,7 @@ class TaskDetailsViewController: UIViewController {
     // MARK: - Properties
     
     var task: Task?
+    var newTask = true
     
     // MARK: UIViewController
     
@@ -28,6 +29,7 @@ class TaskDetailsViewController: UIViewController {
         super.viewDidLoad()
         
         if let t = task {
+            newTask = false
             titleTextField.text = t.title
             categoryTextField.text = t.category?.name
             datePicker.setDate(Date(timeIntervalSince1970: t.date!.timeIntervalSince1970), animated: false)
@@ -42,27 +44,6 @@ class TaskDetailsViewController: UIViewController {
                 return category.name!
             })
         }
-    }
-
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        guard !titleTextField.text!.isEmpty else {
-            TasksService.sharedInstance.deleteTask(task: task!)
-            return
-        }
-        
-        task!.title = titleTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-        task!.date = datePicker.date as NSDate
-        if let catTitle = categoryTextField.text, !catTitle.isEmpty {
-            let category = TasksService.sharedInstance.getOrCreateCategory(name: catTitle.trimmingCharacters(in: .whitespacesAndNewlines))
-            task?.category = category
-        }
-        (UIApplication.shared.delegate as! AppDelegate).sendReloadMsg()
-        TasksService.sharedInstance.save()
-        
-        NotificationHelper.sharedInstance.setupNotification(for: task!)
     }
     
     // MARK: - Actions
@@ -85,6 +66,32 @@ class TaskDetailsViewController: UIViewController {
     
     @IBAction func onViewTap(_ sender: Any) {
         view.endEditing(true)
+    }
+    
+    @IBAction func onCancelTapped(_ sender: Any) {
+        if newTask {
+            TasksService.sharedInstance.deleteTask(task: task!)
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func onDoneTapped(_ sender: Any) {
+        guard !titleTextField.text!.isEmpty else {
+            TasksService.sharedInstance.deleteTask(task: task!)
+            return
+        }
+        
+        task!.title = titleTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        task!.date = datePicker.date as NSDate
+        if let catTitle = categoryTextField.text, !catTitle.isEmpty {
+            let category = TasksService.sharedInstance.getOrCreateCategory(name: catTitle.trimmingCharacters(in: .whitespacesAndNewlines))
+            task?.category = category
+        }
+        (UIApplication.shared.delegate as! AppDelegate).sendReloadMsg()
+        TasksService.sharedInstance.save()
+        
+        NotificationHelper.sharedInstance.setupNotification(for: task!)
+        dismiss(animated: true, completion: nil)
     }
     
     // MARK: Circle func
