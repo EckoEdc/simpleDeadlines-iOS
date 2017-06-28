@@ -41,6 +41,8 @@
 		04BFEC051E27E4E40020F4B6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BFEC041E27E4E40020F4B6 /* CoreData.framework */; };
 		04BFEC071E27ED870020F4B6 /* TaskDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFEC061E27ED870020F4B6 /* TaskDetailsViewController.swift */; };
 		04CC73451E36643100813281 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC73441E36643100813281 /* TaskTableViewCell.swift */; };
+		04EDA2731F03EB0C0014D274 /* Simple_Deadlines_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EDA2721F03EB0C0014D274 /* Simple_Deadlines_UITests.swift */; };
+		04EDA27A1F03EC8F0014D274 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BFEB9E1E27D0C80020F4B6 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 043E5F1A1E3A304F0075056A;
 			remoteInfo = SimpleDeadlinesWatchOS;
+		};
+		04EDA2751F03EB0C0014D274 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04BFEB8F1E27D0C80020F4B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04BFEB961E27D0C80020F4B6;
+			remoteInfo = "Simple Deadlines";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -155,6 +164,9 @@
 		04BFEC041E27E4E40020F4B6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		04BFEC061E27ED870020F4B6 /* TaskDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailsViewController.swift; sourceTree = "<group>"; };
 		04CC73441E36643100813281 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		04EDA2701F03EB0C0014D274 /* Simple Deadlines UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple Deadlines UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04EDA2721F03EB0C0014D274 /* Simple_Deadlines_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Deadlines_UITests.swift; sourceTree = "<group>"; };
+		04EDA2741F03EB0C0014D274 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +203,13 @@
 				04BFEC051E27E4E40020F4B6 /* CoreData.framework in Frameworks */,
 				040F105F1E37CDBB0016C666 /* DateHelper.framework in Frameworks */,
 				040F105E1E37CDB70016C666 /* AERecord.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04EDA26D1F03EB0C0014D274 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +280,7 @@
 				043E5EB91E37D84A0075056A /* Simple Deadlines Urgent Widget */,
 				043E5F1C1E3A30500075056A /* SimpleDeadlinesWatchOS */,
 				043E5F2B1E3A30500075056A /* SimpleDeadlinesWatchOS Extension */,
+				04EDA2711F03EB0C0014D274 /* Simple Deadlines UITests */,
 				04BFEB981E27D0C80020F4B6 /* Products */,
 				04BFEC031E27E4E40020F4B6 /* Frameworks */,
 			);
@@ -274,6 +294,7 @@
 				043E5EB71E37D84A0075056A /* Simple Deadlines Urgent Widget.appex */,
 				043E5F1B1E3A304F0075056A /* SimpleDeadlinesWatchOS.app */,
 				043E5F271E3A30500075056A /* SimpleDeadlinesWatchOS Extension.appex */,
+				04EDA2701F03EB0C0014D274 /* Simple Deadlines UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -309,6 +330,15 @@
 				040F102D1E37A83C0016C666 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		04EDA2711F03EB0C0014D274 /* Simple Deadlines UITests */ = {
+			isa = PBXGroup;
+			children = (
+				04EDA2721F03EB0C0014D274 /* Simple_Deadlines_UITests.swift */,
+				04EDA2741F03EB0C0014D274 /* Info.plist */,
+			);
+			path = "Simple Deadlines UITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,13 +435,31 @@
 			productReference = 04BFEB971E27D0C80020F4B6 /* Simple Deadlines.app */;
 			productType = "com.apple.product-type.application";
 		};
+		04EDA26F1F03EB0C0014D274 /* Simple Deadlines UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04EDA2771F03EB0C0014D274 /* Build configuration list for PBXNativeTarget "Simple Deadlines UITests" */;
+			buildPhases = (
+				04EDA26C1F03EB0C0014D274 /* Sources */,
+				04EDA26D1F03EB0C0014D274 /* Frameworks */,
+				04EDA26E1F03EB0C0014D274 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04EDA2761F03EB0C0014D274 /* PBXTargetDependency */,
+			);
+			name = "Simple Deadlines UITests";
+			productName = "Simple Deadlines UITests";
+			productReference = 04EDA2701F03EB0C0014D274 /* Simple Deadlines UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		04BFEB8F1E27D0C80020F4B6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Edric MILARET";
 				TargetAttributes = {
@@ -455,6 +503,12 @@
 							};
 						};
 					};
+					04EDA26F1F03EB0C0014D274 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = Y7US3C769A;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 04BFEB961E27D0C80020F4B6;
+					};
 				};
 			};
 			buildConfigurationList = 04BFEB921E27D0C80020F4B6 /* Build configuration list for PBXProject "Simple Deadlines" */;
@@ -475,6 +529,7 @@
 				043E5EB61E37D84A0075056A /* Simple Deadlines Urgent Widget */,
 				043E5F1A1E3A304F0075056A /* SimpleDeadlinesWatchOS */,
 				043E5F261E3A30500075056A /* SimpleDeadlinesWatchOS Extension */,
+				04EDA26F1F03EB0C0014D274 /* Simple Deadlines UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -520,6 +575,14 @@
 				04BFEBA51E27D0C80020F4B6 /* LaunchScreen.storyboard in Resources */,
 				04BFEBA21E27D0C80020F4B6 /* Assets.xcassets in Resources */,
 				04BFEBA01E27D0C80020F4B6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04EDA26E1F03EB0C0014D274 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04EDA27A1F03EC8F0014D274 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,6 +650,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04EDA26C1F03EB0C0014D274 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04EDA2731F03EB0C0014D274 /* Simple_Deadlines_UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -609,6 +680,11 @@
 			isa = PBXTargetDependency;
 			target = 043E5F1A1E3A304F0075056A /* SimpleDeadlinesWatchOS */;
 			targetProxy = 043E5F331E3A30500075056A /* PBXContainerItemProxy */;
+		};
+		04EDA2761F03EB0C0014D274 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04BFEB961E27D0C80020F4B6 /* Simple Deadlines */;
+			targetProxy = 04EDA2751F03EB0C0014D274 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -931,6 +1007,36 @@
 			};
 			name = Release;
 		};
+		04EDA2781F03EB0C0014D274 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = Y7US3C769A;
+				INFOPLIST_FILE = "Simple Deadlines UITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.auroralab.Simple-Deadlines-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Simple Deadlines";
+			};
+			name = Debug;
+		};
+		04EDA2791F03EB0C0014D274 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = Y7US3C769A;
+				INFOPLIST_FILE = "Simple Deadlines UITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.auroralab.Simple-Deadlines-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Simple Deadlines";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -987,6 +1093,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		04EDA2771F03EB0C0014D274 /* Build configuration list for PBXNativeTarget "Simple Deadlines UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04EDA2781F03EB0C0014D274 /* Debug */,
+				04EDA2791F03EB0C0014D274 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
