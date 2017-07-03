@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import LibSimpleDeadlines
+import CleanroomLogger
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
@@ -22,9 +23,14 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         do {
             try fetchedResultsController.performFetch()
         } catch {
-            //TODO - Error Handling
-            print("Fetch Error")
+            Log.error?.message("Fetch failed with error: \(error)")
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.tableView.reloadData()
     }
 
     // MARK: - Table view data source

@@ -41,6 +41,7 @@
 		04BFEC051E27E4E40020F4B6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BFEC041E27E4E40020F4B6 /* CoreData.framework */; };
 		04BFEC071E27ED870020F4B6 /* TaskDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFEC061E27ED870020F4B6 /* TaskDetailsViewController.swift */; };
 		04CC73451E36643100813281 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC73441E36643100813281 /* TaskTableViewCell.swift */; };
+		04DAFF701F0A9EB5003C76B5 /* CleanroomLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DAFF6F1F0A9EB5003C76B5 /* CleanroomLogger.framework */; };
 		04EDA2731F03EB0C0014D274 /* Simple_Deadlines_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EDA2721F03EB0C0014D274 /* Simple_Deadlines_UITests.swift */; };
 		04EDA27A1F03EC8F0014D274 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BFEB9E1E27D0C80020F4B6 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -164,6 +165,7 @@
 		04BFEC041E27E4E40020F4B6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		04BFEC061E27ED870020F4B6 /* TaskDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailsViewController.swift; sourceTree = "<group>"; };
 		04CC73441E36643100813281 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		04DAFF6F1F0A9EB5003C76B5 /* CleanroomLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CleanroomLogger.framework; path = Carthage/Build/iOS/CleanroomLogger.framework; sourceTree = "<group>"; };
 		04EDA2701F03EB0C0014D274 /* Simple Deadlines UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple Deadlines UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EDA2721F03EB0C0014D274 /* Simple_Deadlines_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Deadlines_UITests.swift; sourceTree = "<group>"; };
 		04EDA2741F03EB0C0014D274 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DAFF701F0A9EB5003C76B5 /* CleanroomLogger.framework in Frameworks */,
 				048D11121E9400D500C590C6 /* LibSimpleDeadlines.framework in Frameworks */,
 				04BFEC051E27E4E40020F4B6 /* CoreData.framework in Frameworks */,
 				040F105F1E37CDBB0016C666 /* DateHelper.framework in Frameworks */,
@@ -320,6 +323,7 @@
 		04BFEC031E27E4E40020F4B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04DAFF6F1F0A9EB5003C76B5 /* CleanroomLogger.framework */,
 				048D11101E94009500C590C6 /* LibSimpleDeadlines.framework */,
 				040F10571E37CA390016C666 /* DateHelper.framework */,
 				040F10551E37CA360016C666 /* AERecord.framework */,
@@ -598,6 +602,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/AERecord.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/DateHelper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/LibSimpleDeadlines.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/CleanroomLogger.framework",
 			);
 			outputPaths = (
 			);
@@ -1101,6 +1106,7 @@
 				04EDA2791F03EB0C0014D274 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

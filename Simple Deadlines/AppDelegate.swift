@@ -10,6 +10,7 @@ import UIKit
 import WatchConnectivity
 import LibSimpleDeadlines
 import UserNotifications
+import CleanroomLogger
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
@@ -77,22 +78,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         
         session?.sendMessage(["Reload" : true], replyHandler: { (response) in })
         { (error) in
-            print("Error")
+            Log.error?.message("Failed to send reload message to Apple Watch \(error)")
         }
     }
     
     // MARK: - UIApplicationDelegate
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        Log.enable()
+        
         if WCSession.isSupported() {
             session = WCSession.default()
+        } else {
+            Log.info?.message("WCSession unssupported")
         }
         
         if #available(iOS 10.0, *) {
             let center = UNUserNotificationCenter.current()
             center.requestAuthorization(options: [.badge]) { (granted, error) in
                 if !granted {
-                    print("\(String(describing: error))")
+                    Log.error?.message("Notification auth not granted: \(String(describing: error))")
                 }
             }
         }

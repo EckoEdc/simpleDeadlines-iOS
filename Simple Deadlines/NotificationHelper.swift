@@ -9,6 +9,7 @@
 import Foundation
 import UserNotifications
 import LibSimpleDeadlines
+import CleanroomLogger
 
 // MARK: - Notifications
 
@@ -54,7 +55,7 @@ class NotificationHelper: TaskEventsDelegate {
                                                 content: content, trigger: trigger)
             center.add(request, withCompletionHandler: { (error) in
                 if let error = error {
-                    print("Error \(error)")
+                    Log.error?.message("Could not add notification : \(error)")
                 }
             })
         }

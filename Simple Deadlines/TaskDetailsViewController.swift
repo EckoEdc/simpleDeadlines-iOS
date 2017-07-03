@@ -28,6 +28,8 @@ class TaskDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.edgesForExtendedLayout = .all
+        
         if let t = task {
             newTask = false
             titleTextField.text = t.title

@@ -1,3 +1,4 @@
 github "tadija/AERecord"
 github "melvitax/AFDateHelper"
 github "EckoEdc/LibSimpleDeadlines"
+github "emaloney/CleanroomLogger" ~> 5.1.0
