@@ -53,7 +53,7 @@ class TaskDetailsViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func onDateChanged(_ sender: Any) {
-        task?.date = datePicker.date as NSDate
+        task?.date = datePicker.date.dateFor(.startOfDay) as NSDate
         setupCircleCounter()
     }
     
@@ -86,7 +86,7 @@ class TaskDetailsViewController: UIViewController {
         }
         
         task!.title = titleTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-        task!.date = datePicker.date as NSDate
+        task!.date = datePicker.date.dateFor(.startOfDay) as NSDate
         if let catTitle = categoryTextField.text, !catTitle.isEmpty {
             let category = TasksService.sharedInstance.getOrCreateCategory(name: catTitle.trimmingCharacters(in: .whitespacesAndNewlines))
             task?.category = category
