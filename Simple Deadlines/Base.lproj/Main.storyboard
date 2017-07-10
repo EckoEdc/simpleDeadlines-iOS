@@ -99,7 +99,7 @@
                                 <action selector="onCategoryButtonTouched:" destination="uNJ-dp-iZf" eventType="touchUpInside" id="e0S-lh-yhU"/>
                             </connections>
                         </button>
-                        <barButtonItem key="rightBarButtonItem" title="+" id="5a1-89-sNr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5a1-89-sNr">
                             <connections>
                                 <action selector="addTaskButtonTapped:" destination="uNJ-dp-iZf" id="ay2-Ga-eqW"/>
                                 <segue destination="ien-A2-YrX" kind="presentation" identifier="addTask" modalPresentationStyle="formSheet" id="dKs-zy-olv"/>
