@@ -13,7 +13,7 @@ import UserNotifications
 import CleanroomLogger
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate, UNUserNotificationCenterDelegate {
 
     // MARK: - Properties
     var window: UIWindow?
@@ -82,6 +82,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         }
     }
     
+    // MARK: - UNUserNotificationCenterDelegate
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .sound, .badge])
+    }
+    
     // MARK: - UIApplicationDelegate
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -96,12 +102,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         
         if #available(iOS 10.0, *) {
             let center = UNUserNotificationCenter.current()
-            center.requestAuthorization(options: [.badge]) { (granted, error) in
+            center.requestAuthorization(options: [.badge, .alert, .sound]) { (granted, error) in
                 if !granted {
                     Log.error?.message("Notification auth not granted: \(String(describing: error))")
                 }
             }
+            UNUserNotificationCenter.current().delegate = self
         }
+        
+        var appDefaults = Dictionary<String, AnyObject>()
+        appDefaults["hourReminderSetting"] = "8" as AnyObject
+        appDefaults["minutesReminderSetting"] = "00" as AnyObject
+        UserDefaults.standard.register(defaults: appDefaults)
+        UserDefaults.standard.synchronize()
+        
+        NotificationHelper.sharedInstance.setBadgeNumber()
         
         return true
     }
