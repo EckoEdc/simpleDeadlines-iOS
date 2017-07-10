@@ -46,6 +46,8 @@ class TaskDetailsViewController: UIViewController {
                 return category.name!
             })
         }
+        
+        titleTextField.becomeFirstResponder()
     }
     
     // MARK: - Actions
