@@ -14,9 +14,6 @@
 /* Class = "UILabel"; text = "Reminder Notification Time"; ObjectID = "OdS-LA-cVj"; */
 "OdS-LA-cVj.text" = "Heure du rappel";
 
-/* Class = "UIBarButtonItem"; title = "Settings"; ObjectID = "Skb-K7-gFM"; */
-"Skb-K7-gFM.title" = "Paramètres";
-
 /* Class = "UITextField"; accessibilityLabel = "Task Title"; ObjectID = "YrW-L1-waA"; */
 "YrW-L1-waA.accessibilityLabel" = "Titre de la tâche";
 

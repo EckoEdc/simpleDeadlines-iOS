@@ -152,7 +152,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="feP-Hk-FmN">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" title="Settings" id="Skb-K7-gFM">
+                        <barButtonItem key="leftBarButtonItem" image="Settings" id="Skb-K7-gFM">
                             <connections>
                                 <segue destination="j8A-5w-8j8" kind="presentation" identifier="settingsSegue" modalPresentationStyle="formSheet" id="lFd-9C-FVu"/>
                             </connections>
@@ -317,6 +317,9 @@
             <point key="canvasLocation" x="-526" y="122"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Settings" width="64" height="62"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="5Ju-MS-OhR"/>
     </inferredMetricsTieBreakers>
