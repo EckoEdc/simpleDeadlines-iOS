@@ -125,8 +125,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     @IBAction func onCategoryButtonTouched(_ sender: UIButton) {
         let alertController = UIAlertController(title: nil, message: NSLocalizedString("Choose a category to display", comment: ""), preferredStyle: .actionSheet)
         
-        let action = UIAlertAction(title: CategoryType.all.rawValue.capitalizedFirst(), style: .default, handler: { (alertAction) in
-            sender.setTitle(CategoryType.all.rawValue.capitalizedFirst(), for: .normal)
+        let action = UIAlertAction(title: CategoryType.all.localizedValue, style: .default, handler: { (alertAction) in
+            sender.setTitle(CategoryType.all.localizedValue, for: .normal)
             self.filterByCategory(categoryType: .all)
         })
         alertController.addAction(action)
@@ -144,8 +144,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
             }
         }
         
-        let actionArchive = UIAlertAction(title: CategoryType.archive.rawValue.capitalizedFirst(), style: .default, handler: { (alertAction) in
-            sender.setTitle(CategoryType.archive.rawValue.capitalizedFirst(), for: .normal)
+        let actionArchive = UIAlertAction(title: CategoryType.archive.localizedValue, style: .default, handler: { (alertAction) in
+            sender.setTitle(CategoryType.archive.localizedValue, for: .normal)
             self.filterByCategory(categoryType: .archive)
         })
         alertController.addAction(actionArchive)
