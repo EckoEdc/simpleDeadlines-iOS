@@ -111,9 +111,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate, UNUser
         }
 
         //Setup default time for reminder notification
-        if UserDefaults.standard.dictionary(forKey: "reminderNotificationSetting") == nil {
-            let reminderNotificationSetting = ["hour": 8, "minutes": 0]
-            UserDefaults.standard.set(reminderNotificationSetting, forKey: "reminderNotificationSetting")
+        if UserDefaults.standard.dictionary(forKey: SettingsLiteral.reminderNotificationSetting.rawValue) == nil {
+            let reminderNotificationSetting = [SettingsLiteral.reminderTimeComponents.hour.rawValue: 8, SettingsLiteral.reminderTimeComponents.minutes.rawValue: 0]
+            UserDefaults.standard.set(reminderNotificationSetting, forKey: SettingsLiteral.reminderNotificationSetting.rawValue)
         }
         
         NotificationHelper.sharedInstance.setBadgeNumber()

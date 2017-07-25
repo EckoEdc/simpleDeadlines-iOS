@@ -50,10 +50,10 @@ class NotificationHelper: TaskEventsDelegate {
             
             var triggerDate = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second,], from: (task.date! as Date))
             
-            let notificationTime = UserDefaults.standard.dictionary(forKey: "reminderNotificationSetting")!
+            let notificationTime = UserDefaults.standard.dictionary(forKey: SettingsLiteral.reminderNotificationSetting.rawValue)!
             
-            triggerDate.hour = notificationTime["hour"]! as? Int
-            triggerDate.minute = notificationTime["minutes"]! as? Int
+            triggerDate.hour = notificationTime[SettingsLiteral.reminderTimeComponents.hour.rawValue]! as? Int
+            triggerDate.minute = notificationTime[SettingsLiteral.reminderTimeComponents.minutes.rawValue]! as? Int
             triggerDate.second = 00
             
             let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
@@ -71,6 +71,18 @@ class NotificationHelper: TaskEventsDelegate {
     
     func setBadgeNumber() {
         UIApplication.shared.applicationIconBadgeNumber = TasksService.sharedInstance.getNumberOfExpiredTask()
+    }
+    
+    func resetAllNotifications() {
+        let tasks = TasksService.sharedInstance.getTasks(undoneOnly: true)
+        if #available(iOS 10.0, *) {
+            let center = UNUserNotificationCenter.current()
+            center.removeAllPendingNotificationRequests()
+            for task in tasks {
+                setupNotification(for: task)
+            }
+            self.setBadgeNumber()
+        }
     }
 }
 

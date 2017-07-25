@@ -8,11 +8,22 @@
 
 import UIKit
 
+enum SettingsLiteral: String {
+    case reminderNotificationSetting
+    enum reminderTimeComponents: String {
+        case hour
+        case minutes
+    }
+}
+
 class SettingsViewController: UIViewController {
 
     //MARK: IBOutlets
     
     @IBOutlet weak var reminderTimePicker: UIDatePicker!
+    
+    //MARK: Properties
+    var timeModified = false
     
     //MARK: UIViewController
     
@@ -21,14 +32,21 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        reminderNotificationSetting = UserDefaults.standard.dictionary(forKey: "reminderNotificationSetting")
+        reminderNotificationSetting = UserDefaults.standard.dictionary(forKey: SettingsLiteral.reminderNotificationSetting.rawValue)
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat =  "HH:mm"
         
-        let date = dateFormatter.date(from: "\(reminderNotificationSetting["hour"]!):\(reminderNotificationSetting["minutes"]!)")
+        let date = dateFormatter.date(from: "\(reminderNotificationSetting[SettingsLiteral.reminderTimeComponents.hour.rawValue]!):\(reminderNotificationSetting[SettingsLiteral.reminderTimeComponents.minutes.rawValue]!)")
         
         reminderTimePicker.date = date!
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if timeModified {
+            NotificationHelper.sharedInstance.resetAllNotifications()
+        }
+        super.viewWillDisappear(animated)
     }
     
     //MARK: - IBAction
@@ -38,10 +56,11 @@ class SettingsViewController: UIViewController {
     }
 
     @IBAction func onReminderTimeChanged(_ sender: UIDatePicker) {
+        timeModified = true
         let date = sender.date
-        reminderNotificationSetting["hour"] = date.component(.hour)
-        reminderNotificationSetting["minutes"] = date.component(.minute)
-        UserDefaults.standard.set(reminderNotificationSetting, forKey: "reminderNotificationSetting")
+        reminderNotificationSetting[SettingsLiteral.reminderTimeComponents.hour.rawValue] = date.component(.hour)
+        reminderNotificationSetting[SettingsLiteral.reminderTimeComponents.minutes.rawValue] = date.component(.minute)
+        UserDefaults.standard.set(reminderNotificationSetting, forKey: SettingsLiteral.reminderNotificationSetting.rawValue)
     }
     
 }
