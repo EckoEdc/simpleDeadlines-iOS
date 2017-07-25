@@ -318,7 +318,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Settings" width="64" height="62"/>
+        <image name="Settings" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="5Ju-MS-OhR"/>
