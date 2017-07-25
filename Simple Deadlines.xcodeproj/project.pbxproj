@@ -33,7 +33,6 @@
 		048D11121E9400D500C590C6 /* LibSimpleDeadlines.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048D11101E94009500C590C6 /* LibSimpleDeadlines.framework */; };
 		048D11131E94010900C590C6 /* LibSimpleDeadlines.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048D11101E94009500C590C6 /* LibSimpleDeadlines.framework */; };
 		04947E541F13C13700E6E5BE /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04947E531F13C13700E6E5BE /* StringExtension.swift */; };
-		04947E581F13DD6200E6E5BE /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04947E571F13DD6200E6E5BE /* Settings.bundle */; };
 		04A541151E79968A00E9F51D /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A541141E79968A00E9F51D /* NotificationHelper.swift */; };
 		04BFEB9B1E27D0C80020F4B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFEB9A1E27D0C80020F4B6 /* AppDelegate.swift */; };
 		04BFEBA01E27D0C80020F4B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BFEB9E1E27D0C80020F4B6 /* Main.storyboard */; };
@@ -43,6 +42,7 @@
 		04BFEC051E27E4E40020F4B6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BFEC041E27E4E40020F4B6 /* CoreData.framework */; };
 		04BFEC071E27ED870020F4B6 /* TaskDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFEC061E27ED870020F4B6 /* TaskDetailsViewController.swift */; };
 		04CC73451E36643100813281 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC73441E36643100813281 /* TaskTableViewCell.swift */; };
+		04CD396B1F277636004B2699 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD396A1F277636004B2699 /* SettingsViewController.swift */; };
 		04DAFF701F0A9EB5003C76B5 /* CleanroomLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DAFF6F1F0A9EB5003C76B5 /* CleanroomLogger.framework */; };
 		04EDA2731F03EB0C0014D274 /* Simple_Deadlines_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EDA2721F03EB0C0014D274 /* Simple_Deadlines_UITests.swift */; };
 		04EDA27A1F03EC8F0014D274 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BFEB9E1E27D0C80020F4B6 /* Main.storyboard */; };
@@ -157,7 +157,6 @@
 		0451FF7B1E5C983100DC11E5 /* AutocompleteField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutocompleteField.swift; sourceTree = "<group>"; };
 		048D11101E94009500C590C6 /* LibSimpleDeadlines.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LibSimpleDeadlines.framework; path = Carthage/Build/iOS/LibSimpleDeadlines.framework; sourceTree = "<group>"; };
 		04947E531F13C13700E6E5BE /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		04947E571F13DD6200E6E5BE /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		04A541141E79968A00E9F51D /* NotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		04BFEB971E27D0C80020F4B6 /* Simple Deadlines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Deadlines.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BFEB9A1E27D0C80020F4B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +168,7 @@
 		04BFEC041E27E4E40020F4B6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		04BFEC061E27ED870020F4B6 /* TaskDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailsViewController.swift; sourceTree = "<group>"; };
 		04CC73441E36643100813281 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		04CD396A1F277636004B2699 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		04DAFF6F1F0A9EB5003C76B5 /* CleanroomLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CleanroomLogger.framework; path = Carthage/Build/iOS/CleanroomLogger.framework; sourceTree = "<group>"; };
 		04EDA2701F03EB0C0014D274 /* Simple Deadlines UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple Deadlines UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EDA2721F03EB0C0014D274 /* Simple_Deadlines_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Deadlines_UITests.swift; sourceTree = "<group>"; };
@@ -281,7 +281,6 @@
 		04BFEB8E1E27D0C80020F4B6 = {
 			isa = PBXGroup;
 			children = (
-				04947E571F13DD6200E6E5BE /* Settings.bundle */,
 				040F10461E37BFCF0016C666 /* Simple Deadlines iOS Widget.entitlements */,
 				04BFEB991E27D0C80020F4B6 /* Simple Deadlines */,
 				040F102F1E37A83C0016C666 /* Simple Deadlines iOS Widget Summary */,
@@ -322,6 +321,7 @@
 				04CC73441E36643100813281 /* TaskTableViewCell.swift */,
 				04A541141E79968A00E9F51D /* NotificationHelper.swift */,
 				04947E531F13C13700E6E5BE /* StringExtension.swift */,
+				04CD396A1F277636004B2699 /* SettingsViewController.swift */,
 			);
 			path = "Simple Deadlines";
 			sourceTree = "<group>";
@@ -582,7 +582,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04947E581F13DD6200E6E5BE /* Settings.bundle in Resources */,
 				04BFEBA51E27D0C80020F4B6 /* LaunchScreen.storyboard in Resources */,
 				04BFEBA21E27D0C80020F4B6 /* Assets.xcassets in Resources */,
 				04BFEBA01E27D0C80020F4B6 /* Main.storyboard in Resources */,
@@ -660,6 +659,7 @@
 				04BFEC021E27E26A0020F4B6 /* TasksTableViewController.swift in Sources */,
 				04BFEC071E27ED870020F4B6 /* TaskDetailsViewController.swift in Sources */,
 				04BFEB9B1E27D0C80020F4B6 /* AppDelegate.swift in Sources */,
+				04CD396B1F277636004B2699 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

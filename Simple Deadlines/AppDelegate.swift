@@ -109,12 +109,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate, UNUser
             }
             UNUserNotificationCenter.current().delegate = self
         }
-        
-        var appDefaults = Dictionary<String, AnyObject>()
-        appDefaults["hourReminderSetting"] = "8" as AnyObject
-        appDefaults["minutesReminderSetting"] = "00" as AnyObject
-        UserDefaults.standard.register(defaults: appDefaults)
-        UserDefaults.standard.synchronize()
+
+        //Setup default time for reminder notification
+        if UserDefaults.standard.dictionary(forKey: "reminderNotificationSetting") == nil {
+            let reminderNotificationSetting = ["hour": 8, "minutes": 0]
+            UserDefaults.standard.set(reminderNotificationSetting, forKey: "reminderNotificationSetting")
+        }
         
         NotificationHelper.sharedInstance.setBadgeNumber()
         

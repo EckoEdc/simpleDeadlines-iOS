@@ -50,11 +50,10 @@ class NotificationHelper: TaskEventsDelegate {
             
             var triggerDate = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second,], from: (task.date! as Date))
             
-            let hourSetting = UserDefaults.standard.string(forKey: "hourReminderSetting")
-            let minutesSetting = UserDefaults.standard.string(forKey: "minutesReminderSetting")
+            let notificationTime = UserDefaults.standard.dictionary(forKey: "reminderNotificationSetting")!
             
-            triggerDate.hour = Int(hourSetting!)
-            triggerDate.minute = Int(minutesSetting!)
+            triggerDate.hour = notificationTime["hour"]! as? Int
+            triggerDate.minute = notificationTime["minutes"]! as? Int
             triggerDate.second = 00
             
             let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
