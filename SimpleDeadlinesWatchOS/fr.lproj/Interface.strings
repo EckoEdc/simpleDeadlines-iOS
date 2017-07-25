@@ -1,0 +1,30 @@
+
+/* Class = "WKInterfaceLabel"; text = "Title"; ObjectID = "0uD-HN-fon"; */
+"0uD-HN-fon.text" = "Title";
+
+/* Class = "WKInterfaceController"; title = "Deadlines"; ObjectID = "5e3-CK-m4J"; */
+"5e3-CK-m4J.title" = "Deadlines";
+
+/* Class = "WKInterfaceController"; title = "All"; ObjectID = "AgC-eL-Hgc"; */
+"AgC-eL-Hgc.title" = "All";
+
+/* Class = "WKInterfaceLabel"; text = "Title"; ObjectID = "MDF-mN-Tro"; */
+"MDF-mN-Tro.text" = "Title";
+
+/* Class = "WKInterfaceMenuItem"; title = "Category"; ObjectID = "aHm-rT-ooX"; */
+"aHm-rT-ooX.title" = "Category";
+
+/* Class = "WKInterfaceLabel"; text = "0 Days Left"; ObjectID = "dGk-Dk-fSo"; */
+"dGk-Dk-fSo.text" = "0 Days Left";
+
+/* Class = "WKInterfaceButton"; title = "Done"; ObjectID = "fO5-QL-Z4u"; */
+"fO5-QL-Z4u.title" = "Done";
+
+/* Class = "WKInterfaceLabel"; text = "Category name"; ObjectID = "iOe-Lu-OYP"; */
+"iOe-Lu-OYP.text" = "Category name";
+
+/* Class = "WKInterfaceLabel"; text = "Category"; ObjectID = "kIH-VB-GkH"; */
+"kIH-VB-GkH.text" = "Category";
+
+/* Class = "WKInterfaceController"; title = "Category"; ObjectID = "uUc-UC-b1o"; */
+"uUc-UC-b1o.title" = "Category";

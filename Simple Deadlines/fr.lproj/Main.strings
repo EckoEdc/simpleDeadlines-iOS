@@ -1,0 +1,42 @@
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "BNc-vF-2gI"; */
+"BNc-vF-2gI.title" = "Paramètres";
+
+/* Class = "UILabel"; text = "Category"; ObjectID = "Iz0-eX-xUP"; */
+"Iz0-eX-xUP.text" = "Catégorie";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "LUT-3o-SDb"; */
+"LUT-3o-SDb.text" = "Nom";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "OSi-eh-zY0"; */
+"OSi-eh-zY0.text" = "Date";
+
+/* Class = "UILabel"; text = "Reminder Notification Time"; ObjectID = "OdS-LA-cVj"; */
+"OdS-LA-cVj.text" = "Heure du rappel";
+
+/* Class = "UIBarButtonItem"; title = "Settings"; ObjectID = "Skb-K7-gFM"; */
+"Skb-K7-gFM.title" = "Paramètres";
+
+/* Class = "UITextField"; accessibilityLabel = "Task Title"; ObjectID = "YrW-L1-waA"; */
+"YrW-L1-waA.accessibilityLabel" = "Titre de la tâche";
+
+/* Class = "UITextField"; placeholder = "Title"; ObjectID = "YrW-L1-waA"; */
+"YrW-L1-waA.placeholder" = "Titre";
+
+/* Class = "UINavigationItem"; title = "Add Task"; ObjectID = "anc-0J-9GZ"; */
+"anc-0J-9GZ.title" = "Ajouter tâche";
+
+/* Class = "UIViewController"; title = "Settings"; ObjectID = "j8A-5w-8j8"; */
+"j8A-5w-8j8.title" = "Paramètres";
+
+/* Class = "UIButton"; normalTitle = "All"; ObjectID = "ouB-DZ-oYh"; */
+"ouB-DZ-oYh.normalTitle" = "Tout";
+
+/* Class = "UITextField"; accessibilityLabel = "Task Category"; ObjectID = "qXz-j4-ehe"; */
+"qXz-j4-ehe.accessibilityLabel" = "Catégorie de la tâche";
+
+/* Class = "UITextField"; placeholder = "Category"; ObjectID = "qXz-j4-ehe"; */
+"qXz-j4-ehe.placeholder" = "Catégorie";
+
+/* Class = "UITableViewController"; title = "Tasks"; ObjectID = "uNJ-dp-iZf"; */
+"uNJ-dp-iZf.title" = "Tâches";

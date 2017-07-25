@@ -58,13 +58,13 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = self.fetchedResultsController.object(at: editActionsForRowAt) as Task
         
-        let done = UITableViewRowAction(style: .normal, title: "Done") { action, index in
+        let done = UITableViewRowAction(style: .normal, title: NSLocalizedString("Done", comment: "")) { action, index in
             TasksService.sharedInstance.markAsDone(task: task)
             tableView.setEditing(false, animated: true)
             (UIApplication.shared.delegate as! AppDelegate).sendReloadMsg()
         }
         done.backgroundColor = UIColor.green
-        let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
+        let delete = UITableViewRowAction(style: .normal, title: NSLocalizedString("Delete", comment: "")) { action, index in
             TasksService.sharedInstance.deleteTask(task: task)
             tableView.setEditing(false, animated: true)
             (UIApplication.shared.delegate as! AppDelegate).sendReloadMsg()
@@ -123,7 +123,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     // MARK: - Action Sheet
     
     @IBAction func onCategoryButtonTouched(_ sender: UIButton) {
-        let alertController = UIAlertController(title: nil, message: "Choose a category to display", preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: nil, message: NSLocalizedString("Choose a category to display", comment: ""), preferredStyle: .actionSheet)
         
         let action = UIAlertAction(title: CategoryType.all.rawValue.capitalizedFirst(), style: .default, handler: { (alertAction) in
             sender.setTitle(CategoryType.all.rawValue.capitalizedFirst(), for: .normal)
