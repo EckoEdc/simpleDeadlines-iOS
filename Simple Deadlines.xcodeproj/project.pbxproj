@@ -32,6 +32,7 @@
 		0451FF7C1E5C983100DC11E5 /* AutocompleteField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451FF7B1E5C983100DC11E5 /* AutocompleteField.swift */; };
 		048D11121E9400D500C590C6 /* LibSimpleDeadlines.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048D11101E94009500C590C6 /* LibSimpleDeadlines.framework */; };
 		048D11131E94010900C590C6 /* LibSimpleDeadlines.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048D11101E94009500C590C6 /* LibSimpleDeadlines.framework */; };
+		04947E541F13C13700E6E5BE /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04947E531F13C13700E6E5BE /* StringExtension.swift */; };
 		04A541151E79968A00E9F51D /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A541141E79968A00E9F51D /* NotificationHelper.swift */; };
 		04BFEB9B1E27D0C80020F4B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFEB9A1E27D0C80020F4B6 /* AppDelegate.swift */; };
 		04BFEBA01E27D0C80020F4B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BFEB9E1E27D0C80020F4B6 /* Main.storyboard */; };
@@ -41,9 +42,11 @@
 		04BFEC051E27E4E40020F4B6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BFEC041E27E4E40020F4B6 /* CoreData.framework */; };
 		04BFEC071E27ED870020F4B6 /* TaskDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFEC061E27ED870020F4B6 /* TaskDetailsViewController.swift */; };
 		04CC73451E36643100813281 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC73441E36643100813281 /* TaskTableViewCell.swift */; };
+		04CD396B1F277636004B2699 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD396A1F277636004B2699 /* SettingsViewController.swift */; };
 		04DAFF701F0A9EB5003C76B5 /* CleanroomLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DAFF6F1F0A9EB5003C76B5 /* CleanroomLogger.framework */; };
 		04EDA2731F03EB0C0014D274 /* Simple_Deadlines_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EDA2721F03EB0C0014D274 /* Simple_Deadlines_UITests.swift */; };
 		04EDA27A1F03EC8F0014D274 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BFEB9E1E27D0C80020F4B6 /* Main.storyboard */; };
+		04EE12911F27908F00D2E720 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04EE12931F27908F00D2E720 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +157,7 @@
 		043E5F461E3A69620075056A /* CategoryInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryInterfaceController.swift; sourceTree = "<group>"; };
 		0451FF7B1E5C983100DC11E5 /* AutocompleteField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutocompleteField.swift; sourceTree = "<group>"; };
 		048D11101E94009500C590C6 /* LibSimpleDeadlines.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LibSimpleDeadlines.framework; path = Carthage/Build/iOS/LibSimpleDeadlines.framework; sourceTree = "<group>"; };
+		04947E531F13C13700E6E5BE /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		04A541141E79968A00E9F51D /* NotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		04BFEB971E27D0C80020F4B6 /* Simple Deadlines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Deadlines.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BFEB9A1E27D0C80020F4B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -165,10 +169,18 @@
 		04BFEC041E27E4E40020F4B6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		04BFEC061E27ED870020F4B6 /* TaskDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailsViewController.swift; sourceTree = "<group>"; };
 		04CC73441E36643100813281 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		04CD396A1F277636004B2699 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		04DAFF6F1F0A9EB5003C76B5 /* CleanroomLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CleanroomLogger.framework; path = Carthage/Build/iOS/CleanroomLogger.framework; sourceTree = "<group>"; };
 		04EDA2701F03EB0C0014D274 /* Simple Deadlines UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple Deadlines UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EDA2721F03EB0C0014D274 /* Simple_Deadlines_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Deadlines_UITests.swift; sourceTree = "<group>"; };
 		04EDA2741F03EB0C0014D274 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04EE12891F27903600D2E720 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		04EE128A1F27903600D2E720 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		04EE128B1F27903600D2E720 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/MainInterface.strings; sourceTree = "<group>"; };
+		04EE128C1F27903600D2E720 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/MainInterface.strings; sourceTree = "<group>"; };
+		04EE128D1F27903600D2E720 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Interface.strings; sourceTree = "<group>"; };
+		04EE12921F27908F00D2E720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		04EE12941F27909100D2E720 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +328,9 @@
 				04BFEC061E27ED870020F4B6 /* TaskDetailsViewController.swift */,
 				04CC73441E36643100813281 /* TaskTableViewCell.swift */,
 				04A541141E79968A00E9F51D /* NotificationHelper.swift */,
+				04947E531F13C13700E6E5BE /* StringExtension.swift */,
+				04CD396A1F277636004B2699 /* SettingsViewController.swift */,
+				04EE12931F27908F00D2E720 /* Localizable.strings */,
 			);
 			path = "Simple Deadlines";
 			sourceTree = "<group>";
@@ -426,6 +441,7 @@
 				040F103C1E37A83C0016C666 /* Embed App Extensions */,
 				040F10601E37CDC70016C666 /* ShellScript */,
 				043E5F3D1E3A30500075056A /* Embed Watch Content */,
+				04EE128E1F27904600D2E720 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -522,6 +538,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 04BFEB8E1E27D0C80020F4B6;
 			productRefGroup = 04BFEB981E27D0C80020F4B6 /* Products */;
@@ -577,6 +594,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04BFEBA51E27D0C80020F4B6 /* LaunchScreen.storyboard in Resources */,
+				04EE12911F27908F00D2E720 /* Localizable.strings in Resources */,
 				04BFEBA21E27D0C80020F4B6 /* Assets.xcassets in Resources */,
 				04BFEBA01E27D0C80020F4B6 /* Main.storyboard in Resources */,
 			);
@@ -609,6 +627,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		04EE128E1F27904600D2E720 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which bartycrouch > /dev/null; then\n# Incrementally update all Storyboards/XIBs strings files\n\nbartycrouch interfaces -p \"$PROJECT_DIR\"\n\n# Add new keys to Localizable.strings files from NSLocalizedString in code\nbartycrouch code -p \"$PROJECT_DIR/Simple Deadlines\" -l \"$PROJECT_DIR\" -a -s\nelse\necho \"warning: BartyCrouch not installed, download it from https://github.com/Flinesoft/BartyCrouch\"\nfi";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -647,11 +679,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				04CC73451E36643100813281 /* TaskTableViewCell.swift in Sources */,
+				04947E541F13C13700E6E5BE /* StringExtension.swift in Sources */,
 				04A541151E79968A00E9F51D /* NotificationHelper.swift in Sources */,
 				0451FF7C1E5C983100DC11E5 /* AutocompleteField.swift in Sources */,
 				04BFEC021E27E26A0020F4B6 /* TasksTableViewController.swift in Sources */,
 				04BFEC071E27ED870020F4B6 /* TaskDetailsViewController.swift in Sources */,
 				04BFEB9B1E27D0C80020F4B6 /* AppDelegate.swift in Sources */,
+				04CD396B1F277636004B2699 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -698,6 +732,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				040F10331E37A83C0016C666 /* Base */,
+				04EE128B1F27903600D2E720 /* fr */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
@@ -706,6 +741,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				043E5EBD1E37D84A0075056A /* Base */,
+				04EE128C1F27903600D2E720 /* fr */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
@@ -714,6 +750,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				043E5F1E1E3A30500075056A /* Base */,
+				04EE128D1F27903600D2E720 /* fr */,
 			);
 			name = Interface.storyboard;
 			sourceTree = "<group>";
@@ -722,6 +759,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				04BFEB9F1E27D0C80020F4B6 /* Base */,
+				04EE12891F27903600D2E720 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -730,8 +768,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				04BFEBA41E27D0C80020F4B6 /* Base */,
+				04EE128A1F27903600D2E720 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		04EE12931F27908F00D2E720 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04EE12921F27908F00D2E720 /* Base */,
+				04EE12941F27909100D2E720 /* fr */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -881,6 +929,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -931,6 +980,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";

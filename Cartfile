@@ -1,4 +1,4 @@
-github "tadija/AERecord"
-github "melvitax/AFDateHelper"
-github "EckoEdc/LibSimpleDeadlines"
+github "tadija/AERecord" ~> 4.0
+github "melvitax/AFDateHelper" ~> 4.2
+github "EckoEdc/LibSimpleDeadlines" >= 1.1
 github "emaloney/CleanroomLogger" ~> 5.1.0

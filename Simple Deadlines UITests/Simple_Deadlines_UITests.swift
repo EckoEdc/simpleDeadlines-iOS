@@ -71,15 +71,23 @@ class Simple_Deadlines_UITests: XCTestCase {
         XCTAssert(app.tables.cells.count == 1)
     }
     
+    func test5ArchiveCategory() {
+
+        app.navigationBars["All"].buttons["All"].tap()
+        app.buttons["Archive"].tap()
+
+        XCTAssert(app.tables.cells.count == 1)
+    }
+    
     //Notification Delegate Bug
-    func test5AddAndCancel() {
+    func test6AddAndCancel() {
         app.tables.cells.allElementsBoundByIndex[0].tap()
         app.navigationBars["Add Task"].buttons["Cancel"].tap()
         app.navigationBars["All"].buttons["+"].tap()
         app.navigationBars["Add Task"].buttons["Cancel"].tap()
     }
     
-    func test6DeleteTask() {
+    func test7DeleteTask() {
         
         while app.tables.cells.count > 0 {
             let cell = app.tables.cells.allElementsBoundByIndex[0]

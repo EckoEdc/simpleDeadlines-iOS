@@ -58,13 +58,13 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = self.fetchedResultsController.object(at: editActionsForRowAt) as Task
         
-        let done = UITableViewRowAction(style: .normal, title: "Done") { action, index in
+        let done = UITableViewRowAction(style: .normal, title: NSLocalizedString("Done", comment: "")) { action, index in
             TasksService.sharedInstance.markAsDone(task: task)
             tableView.setEditing(false, animated: true)
             (UIApplication.shared.delegate as! AppDelegate).sendReloadMsg()
         }
         done.backgroundColor = UIColor.green
-        let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
+        let delete = UITableViewRowAction(style: .normal, title: NSLocalizedString("Delete", comment: "")) { action, index in
             TasksService.sharedInstance.deleteTask(task: task)
             tableView.setEditing(false, animated: true)
             (UIApplication.shared.delegate as! AppDelegate).sendReloadMsg()
@@ -115,19 +115,19 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         }
     }
     
-    func filterByCategory(categoryName: String? = nil) {
-        TasksService.sharedInstance.filterFetchedResultsByCategory(fetchedResultsController: fetchedResultsController, categoryName: categoryName)
+    func filterByCategory(categoryType: CategoryType, categoryName: String? = nil) {
+        TasksService.sharedInstance.filterFetchedResultsByCategory(fetchedResultsController: fetchedResultsController, categoryType: categoryType, categoryName: categoryName)
         tableView.reloadData()
     }
     
     // MARK: - Action Sheet
     
     @IBAction func onCategoryButtonTouched(_ sender: UIButton) {
-        let alertController = UIAlertController(title: nil, message: "Choose a category to display", preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: nil, message: NSLocalizedString("Choose a category to display", comment: ""), preferredStyle: .actionSheet)
         
-        let action = UIAlertAction(title: "All", style: .default, handler: { (alertAction) in
-            sender.setTitle("All", for: .normal)
-            self.filterByCategory()
+        let action = UIAlertAction(title: CategoryType.all.localizedValue, style: .default, handler: { (alertAction) in
+            sender.setTitle(CategoryType.all.localizedValue, for: .normal)
+            self.filterByCategory(categoryType: .all)
         })
         alertController.addAction(action)
         
@@ -136,14 +136,23 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
                 if category.tasks != nil, category.tasks!.count > 0 {
                     let action = UIAlertAction(title: category.name , style: .default, handler: { (alertAction) in
                         sender.setTitle(category.name, for: .normal)
-                        self.filterByCategory(categoryName: category.name)
+                        self.filterByCategory(categoryType: .userDefined,
+                                              categoryName: category.name)
                     })
                     alertController.addAction(action)
                 }
             }
         }
+        
+        let actionArchive = UIAlertAction(title: CategoryType.archive.localizedValue, style: .default, handler: { (alertAction) in
+            sender.setTitle(CategoryType.archive.localizedValue, for: .normal)
+            self.filterByCategory(categoryType: .archive)
+        })
+        alertController.addAction(actionArchive)
+        
         alertController.popoverPresentationController?.sourceView = sender
         alertController.popoverPresentationController?.sourceRect = sender.bounds
+        
         self.present(alertController, animated: true)
     }
     

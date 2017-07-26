@@ -34,11 +34,11 @@ class NotificationHelper: TaskEventsDelegate {
                     request.identifier == taskID
                 }) {
                     center.removePendingNotificationRequests(withIdentifiers: [taskID])
-                } else {
-                    self.setBadgeNumber()
                 }
+                
             }
         }
+        self.setBadgeNumber()
     }
     
     func setupNotification(for task: Task) {
@@ -46,8 +46,16 @@ class NotificationHelper: TaskEventsDelegate {
             let content = UNMutableNotificationContent()
             let number = (content.badge?.intValue ?? 0) + 1
             content.badge = NSNumber(integerLiteral: number)
+            content.body = "Deadline is today for: \(task.title!)"
             
-            let triggerDate = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second,], from: (task.date! as Date).dateFor(.startOfDay))
+            var triggerDate = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second,], from: (task.date! as Date))
+            
+            let notificationTime = UserDefaults.standard.dictionary(forKey: SettingsLiteral.reminderNotificationSetting.rawValue)!
+            
+            triggerDate.hour = notificationTime[SettingsLiteral.reminderTimeComponents.hour.rawValue]! as? Int
+            triggerDate.minute = notificationTime[SettingsLiteral.reminderTimeComponents.minutes.rawValue]! as? Int
+            triggerDate.second = 00
+            
             let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
             
             let center = UNUserNotificationCenter.current()
@@ -63,6 +71,18 @@ class NotificationHelper: TaskEventsDelegate {
     
     func setBadgeNumber() {
         UIApplication.shared.applicationIconBadgeNumber = TasksService.sharedInstance.getNumberOfExpiredTask()
+    }
+    
+    func resetAllNotifications() {
+        let tasks = TasksService.sharedInstance.getTasks(undoneOnly: true)
+        if #available(iOS 10.0, *) {
+            let center = UNUserNotificationCenter.current()
+            center.removeAllPendingNotificationRequests()
+            for task in tasks {
+                setupNotification(for: task)
+            }
+            self.setBadgeNumber()
+        }
     }
 }
 

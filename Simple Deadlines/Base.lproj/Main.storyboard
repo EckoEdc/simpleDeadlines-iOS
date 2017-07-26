@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17A291m" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="47v-zj-Pgx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17A315i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="47v-zj-Pgx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,6 +9,68 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Settings-->
+        <scene sceneID="s00-Eq-HYI">
+            <objects>
+                <viewController title="Settings" id="j8A-5w-8j8" customClass="SettingsViewController" customModule="Simple_Deadlines" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dJ2-6d-vdM"/>
+                        <viewControllerLayoutGuide type="bottom" id="hnV-xZ-Yuy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ff6-5j-cAT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5o2-jv-FLC">
+                                <rect key="frame" x="27.5" y="213" width="320" height="241.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reminder Notification Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdS-LA-cVj">
+                                        <rect key="frame" x="0.0" y="0.0" width="223" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="x76-9C-Zo8">
+                                        <rect key="frame" x="0.0" y="25.5" width="320" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="522679461.12325197">
+                                            <!--2017-07-25 12:44:21 +0000-->
+                                        </date>
+                                        <connections>
+                                            <action selector="onReminderTimeChanged:" destination="j8A-5w-8j8" eventType="valueChanged" id="nL4-FF-Ydq"/>
+                                        </connections>
+                                    </datePicker>
+                                </subviews>
+                            </stackView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNs-Dg-3N3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Settings" id="BNc-vF-2gI">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="TcR-dL-6dh">
+                                            <connections>
+                                                <action selector="onDoneTapped:" destination="j8A-5w-8j8" id="c0W-ZD-YPT"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gNs-Dg-3N3" secondAttribute="trailing" id="Xfe-eE-lJe"/>
+                            <constraint firstItem="5o2-jv-FLC" firstAttribute="centerY" secondItem="ff6-5j-cAT" secondAttribute="centerY" id="Xte-wc-7MI"/>
+                            <constraint firstItem="5o2-jv-FLC" firstAttribute="centerX" secondItem="ff6-5j-cAT" secondAttribute="centerX" id="aC4-Bg-Ibb"/>
+                            <constraint firstItem="gNs-Dg-3N3" firstAttribute="leading" secondItem="ff6-5j-cAT" secondAttribute="leading" id="eLh-FZ-CkZ"/>
+                            <constraint firstItem="gNs-Dg-3N3" firstAttribute="top" secondItem="dJ2-6d-vdM" secondAttribute="bottom" id="woM-hO-ePe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="reminderTimePicker" destination="x76-9C-Zo8" id="TJa-wj-se1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qd5-Cx-LDH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="421.60000000000002" y="-534.78260869565224"/>
+        </scene>
         <!--Tasks-->
         <scene sceneID="GBw-vS-rJu">
             <objects>
@@ -90,6 +152,11 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="feP-Hk-FmN">
                         <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" image="Settings" id="Skb-K7-gFM">
+                            <connections>
+                                <segue destination="j8A-5w-8j8" kind="presentation" identifier="settingsSegue" modalPresentationStyle="formSheet" id="lFd-9C-FVu"/>
+                            </connections>
+                        </barButtonItem>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ouB-DZ-oYh">
                             <rect key="frame" x="112.5" y="7" width="150" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -99,7 +166,7 @@
                                 <action selector="onCategoryButtonTouched:" destination="uNJ-dp-iZf" eventType="touchUpInside" id="e0S-lh-yhU"/>
                             </connections>
                         </button>
-                        <barButtonItem key="rightBarButtonItem" title="+" id="5a1-89-sNr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5a1-89-sNr">
                             <connections>
                                 <action selector="addTaskButtonTapped:" destination="uNJ-dp-iZf" id="ay2-Ga-eqW"/>
                                 <segue destination="ien-A2-YrX" kind="presentation" identifier="addTask" modalPresentationStyle="formSheet" id="dKs-zy-olv"/>
@@ -188,12 +255,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Add Task" id="anc-0J-9GZ">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="h8p-mV-65m">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="h8p-mV-65m">
                                             <connections>
                                                 <action selector="onCancelTapped:" destination="ien-A2-YrX" id="Dcu-M8-IDg"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Done" id="p4s-oQ-r9d">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="p4s-oQ-r9d">
                                             <connections>
                                                 <action selector="onDoneTapped:" destination="ien-A2-YrX" id="AR8-eL-MND"/>
                                             </connections>
@@ -250,6 +317,9 @@
             <point key="canvasLocation" x="-526" y="122"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Settings" width="22" height="22"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="5Ju-MS-OhR"/>
     </inferredMetricsTieBreakers>

@@ -1,0 +1,27 @@
+
+/* Class = "WKInterfaceLabel"; text = "Title"; ObjectID = "0uD-HN-fon"; */
+"0uD-HN-fon.text" = "Titre";
+
+/* Class = "WKInterfaceController"; title = "Deadlines"; ObjectID = "5e3-CK-m4J"; */
+"5e3-CK-m4J.title" = "Deadlines";
+
+/* Class = "WKInterfaceLabel"; text = "Title"; ObjectID = "MDF-mN-Tro"; */
+"MDF-mN-Tro.text" = "Titre";
+
+/* Class = "WKInterfaceMenuItem"; title = "Category"; ObjectID = "aHm-rT-ooX"; */
+"aHm-rT-ooX.title" = "Catégorie";
+
+/* Class = "WKInterfaceLabel"; text = "0 Days Left"; ObjectID = "dGk-Dk-fSo"; */
+"dGk-Dk-fSo.text" = "0 Jours Restant";
+
+/* Class = "WKInterfaceButton"; title = "Done"; ObjectID = "fO5-QL-Z4u"; */
+"fO5-QL-Z4u.title" = "Fait";
+
+/* Class = "WKInterfaceLabel"; text = "Category name"; ObjectID = "iOe-Lu-OYP"; */
+"iOe-Lu-OYP.text" = "Nom de catégorie";
+
+/* Class = "WKInterfaceLabel"; text = "Category"; ObjectID = "kIH-VB-GkH"; */
+"kIH-VB-GkH.text" = "Catégorie";
+
+/* Class = "WKInterfaceController"; title = "Category"; ObjectID = "uUc-UC-b1o"; */
+"uUc-UC-b1o.title" = "Catégorie";
