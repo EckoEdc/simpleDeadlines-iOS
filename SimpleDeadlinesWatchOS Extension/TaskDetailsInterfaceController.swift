@@ -30,7 +30,7 @@ class TaskDetailsInterfaceController: WKInterfaceController {
         session = array[1] as? WCSession
         
         titleLabel.setText(task["title"] as? String)
-        daysLeftLabel.setText("\(task["daysLeft"] as! String) Days left")
+        daysLeftLabel.setText(NSLocalizedString("\(task["daysLeft"] as! String) Days left", comment: ""))
         categoryLabel.setText(task["category"] as? String)
     }
 

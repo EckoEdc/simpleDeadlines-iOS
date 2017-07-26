@@ -28,8 +28,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         }
     }
     
-    var category: [String] = ["All"]
-    var currentCategory: String = "All" {
+    var category: [String] = [""]
+    var currentCategory: String = "" {
         didSet {
             self.setTitle(currentCategory)
         }
@@ -53,7 +53,12 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         if WCSession.isSupported() {
             
             if let session = session, session.activationState == .activated {
-                getData()
+                if currentCategory.isEmpty {
+                    getCategoryData(completionHandler: populateCatAndTask)
+                } else {
+                    self.tasks.removeAll()
+                    getTasksData()
+                }
             } else {
                 self.session = WCSession.default()
             }
@@ -66,7 +71,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         if error == nil {
-            getData()
+            getCategoryData(completionHandler: populateCatAndTask)
         } else {
             print(error!.localizedDescription)
         }
@@ -74,12 +79,18 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         if (message["Reload"] as? Bool) != nil {
-            getData()
+            getCategoryData(completionHandler: populateCatAndTask)
             replyHandler([:])
         }
     }
     
-    func getData() {
+    func populateCatAndTask() {
+        guard self.category.count > 0 else {return}
+        self.currentCategory = self.category[0]
+        self.getTasksData()
+    }
+    
+    func getTasksData() {
         session?.sendMessage(["Tasks" : currentCategory, "Category" : true], replyHandler: { response in
             DispatchQueue.main.async {
                 self.tasks = (response["Tasks"] as! [[String: Any]])
@@ -87,9 +98,14 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         }, errorHandler: { (error) in
             print(error)
         })
+        
+    }
+    
+    func getCategoryData(completionHandler: (() -> ())? = nil) {
         session?.sendMessage(["Category" : true], replyHandler: { response in
             DispatchQueue.main.async {
-                self.category = ["All"] + (response["Category"] as! [String])
+                self.category = (response["Category"] as! [String])
+                completionHandler?()
             }
         }, errorHandler: { (error) in
             print(error)
