@@ -5,7 +5,7 @@ Swift/iOS port of Android Simple Deadlines: A simple and readable deadline manag
 
 ## Download
 
-<a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1207950592&mt=8" rel="App Sore">![Foo](https://devimages.apple.com.edgekey.net/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg)</a>
+<a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1207950592&mt=8" rel="App Store">![App Store Link](https://devimages.apple.com.edgekey.net/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg)</a>
 
 ## Contribute - help is always welcome!
 
